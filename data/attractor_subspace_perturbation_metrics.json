@@ -1,6 +1,6 @@
 {
   "model": "qwen2.5-0.5b",
-  "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+  "path": "models\\qwen2.5-0.5b",
   "device": "cuda:1",
   "gpu_free_gib_at_start": 14.8,
   "runtime_note": "fp32 on GPU (spec said bf16): eps<=1e-3 unit-spread injections are below bf16's ~0.4% relative resolution and would round to zero; fp32 0.5B ~ 2 GB fits easily",

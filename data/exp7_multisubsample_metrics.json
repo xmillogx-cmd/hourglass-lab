@@ -1,6 +1,6 @@
 {
   "smollm-135m": {
-    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "path": "models\\smollm-135m",
     "dtype": "torch.float32",
     "n_reps": 5,
     "protocol": "tied G_in/G_out decomposition (multi-rep)",
@@ -47,7 +47,7 @@
     ]
   },
   "qwen2.5-0.5b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "path": "models\\qwen2.5-0.5b",
     "dtype": "torch.float32",
     "n_reps": 5,
     "protocol": "tied G_in/G_out decomposition (multi-rep)",
@@ -94,7 +94,7 @@
     ]
   },
   "tinyllama-1.1b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "path": "models\\tinyllama-1.1b",
     "dtype": "torch.float32",
     "n_reps": 5,
     "protocol": "untied baseline (multi-rep)",
@@ -141,7 +141,7 @@
     ]
   },
   "qwen2.5-3b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "path": "models\\qwen2.5-3b",
     "dtype": "torch.bfloat16",
     "n_reps": 5,
     "protocol": "tied G_in/G_out decomposition (multi-rep)",
@@ -188,7 +188,7 @@
     ]
   },
   "qwen3-4b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "path": "models\\qwen3-4b",
     "dtype": "torch.bfloat16",
     "n_reps": 5,
     "protocol": "tied G_in/G_out decomposition (multi-rep)",
@@ -235,12 +235,12 @@
     ]
   },
   "gemma-4-e2b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "path": "models\\gemma-4-e2b",
     "dtype": "torch.bfloat16",
     "status": "skipped (OutOfMemoryError: CUDA out of memory. Tried to allocate 1.50 GiB. GPU 1 has a total capacity of 15.93 GiB of which 922.02 MiB is free. Of the allocated memory 12.06 GiB is allocated by PyTorch, and 1.64 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf))"
   },
   "pythia-2.8b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "path": "models\\pythia-2.8b",
     "dtype": "torch.bfloat16",
     "n_reps": 5,
     "protocol": "untied baseline (multi-rep)",
@@ -287,7 +287,7 @@
     ]
   },
   "phi-1_5": {
-    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "path": "models\\phi-1_5",
     "dtype": "torch.float32",
     "n_reps": 5,
     "protocol": "untied baseline (multi-rep)",

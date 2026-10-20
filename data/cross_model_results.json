@@ -16,7 +16,7 @@
       "params": {
         "exact": 134515008
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m"
+      "path": "models\\smollm-135m"
     },
     "qwen2.5-0.5b": {
       "model_type": "qwen2",
@@ -32,7 +32,7 @@
       "params": {
         "exact": 494032768
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b"
+      "path": "models\\qwen2.5-0.5b"
     },
     "tinyllama-1.1b": {
       "model_type": "llama",
@@ -48,7 +48,7 @@
       "params": {
         "exact": 1100048384
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b"
+      "path": "models\\tinyllama-1.1b"
     },
     "qwen2.5-3b": {
       "model_type": "qwen2",
@@ -64,7 +64,7 @@
       "params": {
         "exact": 3085938688
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b"
+      "path": "models\\qwen2.5-3b"
     },
     "qwen3-4b": {
       "model_type": "qwen3",
@@ -80,7 +80,7 @@
       "params": {
         "exact": 4022468096
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b"
+      "path": "models\\qwen3-4b"
     },
     "gemma-4-e2b": {
       "model_type": "gemma4",
@@ -96,12 +96,12 @@
       "params": {
         "exact": 5123178979
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b"
+      "path": "models\\gemma-4-e2b"
     }
   },
   "exp5_anatomy": {
     "smollm-135m": {
-      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+      "path": "models\\smollm-135m",
       "dtype": "torch.float32",
       "aniso_raw": 0.3493,
       "aniso_centered": 0.0589,
@@ -142,7 +142,7 @@
       "neck_pr_centered": 1.08
     },
     "qwen2.5-0.5b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+      "path": "models\\qwen2.5-0.5b",
       "dtype": "torch.float32",
       "aniso_raw": 0.1593,
       "aniso_centered": 0.0428,
@@ -177,7 +177,7 @@
       "neck_pr_centered": 1.17
     },
     "tinyllama-1.1b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+      "path": "models\\tinyllama-1.1b",
       "dtype": "torch.float32",
       "aniso_raw": 0.0217,
       "aniso_centered": 0.0199,
@@ -210,7 +210,7 @@
       "neck_pr_centered": 1.13
     },
     "qwen2.5-3b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+      "path": "models\\qwen2.5-3b",
       "dtype": "torch.bfloat16",
       "aniso_raw": 0.0831,
       "aniso_centered": 0.0213,
@@ -257,7 +257,7 @@
       "neck_pr_centered": 1.1
     },
     "qwen3-4b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+      "path": "models\\qwen3-4b",
       "dtype": "torch.bfloat16",
       "aniso_raw": 0.091,
       "aniso_centered": 0.0188,
@@ -304,7 +304,7 @@
       "neck_pr_centered": 1.13
     },
     "gemma-4-e2b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+      "path": "models\\gemma-4-e2b",
       "dtype": "torch.bfloat16",
       "aniso_raw": 0.0643,
       "aniso_centered": 0.0265,
@@ -352,7 +352,7 @@
   },
   "exp6_lim_scan": {
     "smollm-135m": {
-      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+      "path": "models\\smollm-135m",
       "dtype": "torch.float32",
       "lengths_run": [
         2048
@@ -542,7 +542,7 @@
       "inversion_contrast": -0.1912
     },
     "qwen2.5-0.5b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+      "path": "models\\qwen2.5-0.5b",
       "dtype": "torch.float32",
       "lengths_run": [
         2048,
@@ -994,7 +994,7 @@
       "inversion_contrast": 0.3854
     },
     "tinyllama-1.1b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+      "path": "models\\tinyllama-1.1b",
       "dtype": "torch.float32",
       "lengths_run": [
         2048
@@ -1184,7 +1184,7 @@
       "inversion_contrast": 0.7055
     },
     "qwen2.5-3b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+      "path": "models\\qwen2.5-3b",
       "dtype": "torch.bfloat16",
       "lengths_run": [
         2048,
@@ -1505,7 +1505,7 @@
       "inversion_contrast": -1.2865
     },
     "qwen3-4b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+      "path": "models\\qwen3-4b",
       "dtype": "torch.bfloat16",
       "lengths_run": [
         2048,
@@ -1826,7 +1826,7 @@
       "inversion_contrast": 0.5885
     },
     "gemma-4-e2b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+      "path": "models\\gemma-4-e2b",
       "dtype": "torch.bfloat16",
       "lengths_run": [
         2048,
@@ -2149,7 +2149,7 @@
   },
   "exp7_gradient_interference": {
     "smollm-135m": {
-      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+      "path": "models\\smollm-135m",
       "dtype": "torch.float32",
       "protocol": "tied G_in/G_out decomposition",
       "cos_gin_vs_gout": 0.0155,
@@ -2163,7 +2163,7 @@
       "anisotropy_centered": 0.0589
     },
     "qwen2.5-0.5b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+      "path": "models\\qwen2.5-0.5b",
       "dtype": "torch.float32",
       "protocol": "tied G_in/G_out decomposition",
       "cos_gin_vs_gout": 0.0183,
@@ -2177,7 +2177,7 @@
       "anisotropy_centered": 0.0428
     },
     "tinyllama-1.1b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+      "path": "models\\tinyllama-1.1b",
       "dtype": "torch.float32",
       "protocol": "untied baseline (separate matrices)",
       "cos_gemb_vs_glm": 0.0013,
@@ -2189,7 +2189,7 @@
       "anisotropy_centered": 0.0199
     },
     "qwen2.5-3b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+      "path": "models\\qwen2.5-3b",
       "dtype": "torch.bfloat16",
       "protocol": "tied G_in/G_out decomposition",
       "cos_gin_vs_gout": -0.0061,
@@ -2203,7 +2203,7 @@
       "anisotropy_centered": 0.0213
     },
     "qwen3-4b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+      "path": "models\\qwen3-4b",
       "dtype": "torch.bfloat16",
       "protocol": "tied G_in/G_out decomposition",
       "cos_gin_vs_gout": -0.0036,
@@ -2217,7 +2217,7 @@
       "anisotropy_centered": 0.0188
     },
     "gemma-4-e2b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+      "path": "models\\gemma-4-e2b",
       "dtype": "torch.bfloat16",
       "protocol": "tied G_in/G_out decomposition",
       "cos_gin_vs_gout": 0.0229,

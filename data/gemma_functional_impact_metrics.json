@@ -1,6 +1,6 @@
 {
   "gemma-4-e2b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "path": "models\\gemma-4-e2b",
     "gpu_used": "cuda:1",
     "gpu_free_gib_at_start": 14.8,
     "architectural_facts": {

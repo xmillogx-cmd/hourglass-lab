@@ -1,6 +1,6 @@
 {
   "model": "gemma-4-e2b",
-  "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+  "path": "models\\gemma-4-e2b",
   "runtime": "fp32 CPU (~18.5 GB RAM). Spec's bf16-GPU form is physically impossible at eps<=1e-3: per-element perturbation magnitude is far below bf16's ~0.4% quantization resolution for O(0.01-0.1) weights — follows the Part A precedent in cross_model/run_gemma_functional_impact.py.",
   "n_tokens": 128,
   "base_loss": 7.132609,

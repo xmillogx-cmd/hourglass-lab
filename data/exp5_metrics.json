@@ -1,6 +1,6 @@
 {
   "smollm-135m": {
-    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "path": "models\\smollm-135m",
     "dtype": "torch.float32",
     "aniso_raw": 0.3493,
     "aniso_centered": 0.0589,
@@ -41,7 +41,7 @@
     "neck_pr_centered": 1.08
   },
   "qwen2.5-0.5b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "path": "models\\qwen2.5-0.5b",
     "dtype": "torch.float32",
     "aniso_raw": 0.1593,
     "aniso_centered": 0.0428,
@@ -76,7 +76,7 @@
     "neck_pr_centered": 1.17
   },
   "tinyllama-1.1b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "path": "models\\tinyllama-1.1b",
     "dtype": "torch.float32",
     "aniso_raw": 0.0217,
     "aniso_centered": 0.0199,
@@ -109,7 +109,7 @@
     "neck_pr_centered": 1.13
   },
   "qwen2.5-3b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "path": "models\\qwen2.5-3b",
     "dtype": "torch.bfloat16",
     "aniso_raw": 0.0831,
     "aniso_centered": 0.0213,
@@ -156,7 +156,7 @@
     "neck_pr_centered": 1.1
   },
   "qwen3-4b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "path": "models\\qwen3-4b",
     "dtype": "torch.bfloat16",
     "aniso_raw": 0.091,
     "aniso_centered": 0.0188,
@@ -203,7 +203,7 @@
     "neck_pr_centered": 1.13
   },
   "gemma-4-e2b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "path": "models\\gemma-4-e2b",
     "dtype": "torch.bfloat16",
     "aniso_raw": 0.0643,
     "aniso_centered": 0.0265,
@@ -249,7 +249,7 @@
     "neck_pr_centered": 6.0
   },
   "pythia-2.8b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "path": "models\\pythia-2.8b",
     "dtype": "torch.bfloat16",
     "aniso_raw": 0.0237,
     "aniso_centered": 0.0236,
@@ -292,7 +292,7 @@
     "neck_pr_centered": 7.29
   },
   "phi-1_5": {
-    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "path": "models\\phi-1_5",
     "dtype": "torch.float32",
     "aniso_raw": 0.023,
     "aniso_centered": 0.0238,

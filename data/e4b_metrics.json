@@ -2,7 +2,7 @@
   "task": "E4b follow-up — pressure of mass: DC energy share + token-matrix PR/k95 vs context length; prefix (coherent doc) vs mixed (topic-interference) conditions",
   "model": {
     "name": "tied_qwen2_5_0_5b",
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "path": "models\\qwen2.5-0.5b",
     "note": "tied Qwen2.5-0.5B, fp32, physical GPU 1"
   },
   "full_corpus_tokens": 8599,

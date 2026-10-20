@@ -2,7 +2,7 @@
   "task": "E4e follow-up — needle-in-haystack functional test (base-model pattern-completion logit probe): does the model USE far context?",
   "model": {
     "name": "tied_qwen2_5_0_5b",
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "path": "models\\qwen2.5-0.5b",
     "note": "tied Qwen2.5-0.5B base, fp32, physical GPU 1"
   },
   "probe_template": " The verification code for this record is",

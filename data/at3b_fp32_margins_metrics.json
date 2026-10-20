@@ -1,6 +1,6 @@
 {
   "smollm-135m": {
-    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "path": "models\\smollm-135m",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 30,
@@ -162,7 +162,7 @@
     }
   },
   "qwen2.5-0.5b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "path": "models\\qwen2.5-0.5b",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 24,
@@ -324,7 +324,7 @@
     }
   },
   "tinyllama-1.1b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "path": "models\\tinyllama-1.1b",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 22,
@@ -486,7 +486,7 @@
     }
   },
   "qwen2.5-3b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "path": "models\\qwen2.5-3b",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 36,
@@ -648,7 +648,7 @@
     }
   },
   "qwen3-4b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "path": "models\\qwen3-4b",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 36,
@@ -810,7 +810,7 @@
     }
   },
   "gemma-4-e2b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "path": "models\\gemma-4-e2b",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 35,
@@ -972,7 +972,7 @@
     }
   },
   "pythia-2.8b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "path": "models\\pythia-2.8b",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 32,
@@ -1134,7 +1134,7 @@
     }
   },
   "phi-1_5": {
-    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "path": "models\\phi-1_5",
     "device": "cpu",
     "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
     "n_layers": 24,

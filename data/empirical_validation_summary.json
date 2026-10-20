@@ -2,13 +2,13 @@
   "task": "Empirical validation of the unified geometric theory — tied vs untied control pair (TZ: 4 experiments)",
   "models": {
     "tied_qwen2_5_0_5b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+      "path": "models\\qwen2.5-0.5b",
       "role": "TIED (Model A)",
       "hidden_size": 896,
       "num_hidden_layers": 24
     },
     "untied_tinylama_1_1b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+      "path": "models\\tinyllama-1.1b",
       "role": "UNTIED (Model B)",
       "device_note": "all compute on physical GPU 1 (cuda:1), fp32"
     }
@@ -117,7 +117,7 @@
   },
   "exp2_pr_profile_full": {
     "tied_qwen2_5_0_5b": {
-      "model_path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+      "model_path": "models\\qwen2.5-0.5b",
       "hidden_size": 896,
       "num_hidden_layers": 24,
       "n_tokens": 2048,
@@ -182,7 +182,7 @@
       "pr_last": 7.64
     },
     "untied_tinylama_1_1b": {
-      "model_path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+      "model_path": "models\\tinyllama-1.1b",
       "hidden_size": 2048,
       "num_hidden_layers": 22,
       "n_tokens": 2048,

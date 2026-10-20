@@ -1,6 +1,6 @@
 {
   "model": "qwen2.5-0.5b",
-  "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+  "path": "models\\qwen2.5-0.5b",
   "device": "cuda:1",
   "gpu_free_gib_at_start": 14.8,
   "haystack_len": 2048,

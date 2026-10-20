@@ -1,7 +1,7 @@
 {
   "meta": {
     "corpus": "wikitext-2 test split (quantization control text), first 2048 tokens per model",
-    "raw_text_path": "G:\\uni\\cmq_experiment\\.wikitext2_raw_text.txt",
+    "raw_text_path": ".wikitext2_raw_text.txt",
     "n_tokens": 2048,
     "grid_n": 64,
     "criteria": {
@@ -12,7 +12,7 @@
   },
   "models": {
     "smollm-135m": {
-      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+      "path": "models\\smollm-135m",
       "dtype": "torch.float32",
       "layers_L": 30,
       "hidden_H": 576,
@@ -122,7 +122,7 @@
       "neck_pr_centered": 1.08
     },
     "qwen2.5-0.5b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+      "path": "models\\qwen2.5-0.5b",
       "dtype": "torch.float32",
       "layers_L": 24,
       "hidden_H": 896,
@@ -214,7 +214,7 @@
       "neck_pr_centered": 1.17
     },
     "tinyllama-1.1b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+      "path": "models\\tinyllama-1.1b",
       "dtype": "torch.float32",
       "layers_L": 22,
       "hidden_H": 2048,
@@ -300,7 +300,7 @@
       "neck_pr_centered": 1.14
     },
     "qwen2.5-3b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+      "path": "models\\qwen2.5-3b",
       "dtype": "torch.bfloat16",
       "layers_L": 36,
       "hidden_H": 2048,
@@ -428,7 +428,7 @@
       "neck_pr_centered": 1.22
     },
     "qwen3-4b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+      "path": "models\\qwen3-4b",
       "dtype": "torch.bfloat16",
       "layers_L": 36,
       "hidden_H": 2560,
@@ -556,7 +556,7 @@
       "neck_pr_centered": 1.04
     },
     "gemma-4-e2b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+      "path": "models\\gemma-4-e2b",
       "dtype": "torch.bfloat16",
       "layers_L": 35,
       "hidden_H": 1536,
@@ -681,7 +681,7 @@
       "neck_pr_centered": 18.38
     },
     "pythia-2.8b": {
-      "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+      "path": "models\\pythia-2.8b",
       "dtype": "torch.bfloat16",
       "layers_L": 32,
       "hidden_H": 2560,
@@ -797,7 +797,7 @@
       "neck_pr_centered": 5.92
     },
     "phi-1_5": {
-      "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+      "path": "models\\phi-1_5",
       "dtype": "torch.float32",
       "layers_L": 24,
       "hidden_H": 2048,

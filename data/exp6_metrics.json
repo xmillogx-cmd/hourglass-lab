@@ -1,6 +1,6 @@
 {
   "smollm-135m": {
-    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "path": "models\\smollm-135m",
     "dtype": "torch.float32",
     "lengths_run": [
       2048
@@ -190,7 +190,7 @@
     "inversion_contrast": -0.1912
   },
   "qwen2.5-0.5b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "path": "models\\qwen2.5-0.5b",
     "dtype": "torch.float32",
     "lengths_run": [
       2048,
@@ -642,7 +642,7 @@
     "inversion_contrast": 0.3854
   },
   "tinyllama-1.1b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "path": "models\\tinyllama-1.1b",
     "dtype": "torch.float32",
     "lengths_run": [
       2048
@@ -832,7 +832,7 @@
     "inversion_contrast": 0.7055
   },
   "qwen2.5-3b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "path": "models\\qwen2.5-3b",
     "dtype": "torch.bfloat16",
     "lengths_run": [
       2048,
@@ -1153,7 +1153,7 @@
     "inversion_contrast": -1.2865
   },
   "qwen3-4b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "path": "models\\qwen3-4b",
     "dtype": "torch.bfloat16",
     "lengths_run": [
       2048,
@@ -1474,7 +1474,7 @@
     "inversion_contrast": 0.5885
   },
   "gemma-4-e2b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "path": "models\\gemma-4-e2b",
     "dtype": "torch.bfloat16",
     "lengths_run": [
       2048,
@@ -1795,7 +1795,7 @@
     "inversion_contrast": -0.4479
   },
   "pythia-2.8b": {
-    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "path": "models\\pythia-2.8b",
     "dtype": "torch.bfloat16",
     "lengths_run": [
       2048
@@ -1985,7 +1985,7 @@
     "inversion_contrast": 0.5703
   },
   "phi-1_5": {
-    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "path": "models\\phi-1_5",
     "dtype": "torch.float32",
     "lengths_run": [
       2048

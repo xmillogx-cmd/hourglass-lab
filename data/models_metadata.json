@@ -16,7 +16,7 @@
       "params": {
         "exact": 134515008
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m"
+      "path": "models\\smollm-135m"
     },
     "qwen2.5-0.5b": {
       "model_type": "qwen2",
@@ -32,7 +32,7 @@
       "params": {
         "exact": 494032768
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b"
+      "path": "models\\qwen2.5-0.5b"
     },
     "tinyllama-1.1b": {
       "model_type": "llama",
@@ -48,7 +48,7 @@
       "params": {
         "exact": 1100048384
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b"
+      "path": "models\\tinyllama-1.1b"
     },
     "qwen2.5-3b": {
       "model_type": "qwen2",
@@ -64,7 +64,7 @@
       "params": {
         "exact": 3085938688
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b"
+      "path": "models\\qwen2.5-3b"
     },
     "qwen3-4b": {
       "model_type": "qwen3",
@@ -80,7 +80,7 @@
       "params": {
         "exact": 4022468096
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b"
+      "path": "models\\qwen3-4b"
     },
     "gemma-4-e2b": {
       "model_type": "gemma4",
@@ -96,7 +96,7 @@
       "params": {
         "exact": 5123178979
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b"
+      "path": "models\\gemma-4-e2b"
     },
     "pythia-2.8b": {
       "model_type": "gpt_neox",
@@ -112,7 +112,7 @@
       "params": {
         "exact": 2909427040
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b"
+      "path": "models\\pythia-2.8b"
     },
     "phi-1_5": {
       "model_type": "phi",
@@ -128,7 +128,7 @@
       "params": {
         "exact": 1418270720
       },
-      "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5"
+      "path": "models\\phi-1_5"
     }
   }
 }
