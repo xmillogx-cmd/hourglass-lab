@@ -1,0 +1,95 @@
+{
+  "model": "qwen2.5-0.5b",
+  "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+  "device": "cuda:1",
+  "gpu_free_gib_at_start": 14.8,
+  "runtime_note": "fp32 on GPU (spec said bf16): eps<=1e-3 unit-spread injections are below bf16's ~0.4% relative resolution and would round to zero; fp32 0.5B ~ 2 GB fits easily",
+  "neck_layer": 4,
+  "k_subspace": 10,
+  "n_tokens": 512,
+  "eta_seed": 7,
+  "subspace": {
+    "energy_frac_top_k": 0.9817,
+    "top_singular_values": [
+      1510.1711,
+      74.4961,
+      54.8832,
+      45.2982,
+      40.773,
+      38.8118,
+      36.9804,
+      36.0849,
+      35.5409,
+      33.6203
+    ]
+  },
+  "arms_facts": {
+    "radial": {
+      "direction_norm": 1.0
+    },
+    "parallel": {
+      "direction_norm": 0.0962,
+      "note": "||P_par@eta|| ~ sqrt(k/D) for random eta — the in-subspace share"
+    },
+    "orthogonal": {
+      "direction_norm": 0.9954
+    }
+  },
+  "sweep": [
+    {
+      "arm": "radial",
+      "epsilon": 0.0001,
+      "deviation_frobenius": 0.025162,
+      "per_token_mean_l2": 0.001079
+    },
+    {
+      "arm": "radial",
+      "epsilon": 0.001,
+      "deviation_frobenius": 0.240864,
+      "per_token_mean_l2": 0.010325
+    },
+    {
+      "arm": "radial",
+      "epsilon": 0.01,
+      "deviation_frobenius": 2.407476,
+      "per_token_mean_l2": 0.103195
+    },
+    {
+      "arm": "parallel",
+      "epsilon": 0.0001,
+      "deviation_frobenius": 0.007097,
+      "per_token_mean_l2": 0.0003
+    },
+    {
+      "arm": "parallel",
+      "epsilon": 0.001,
+      "deviation_frobenius": 0.034087,
+      "per_token_mean_l2": 0.001437
+    },
+    {
+      "arm": "parallel",
+      "epsilon": 0.01,
+      "deviation_frobenius": 0.333593,
+      "per_token_mean_l2": 0.014051
+    },
+    {
+      "arm": "orthogonal",
+      "epsilon": 0.0001,
+      "deviation_frobenius": 0.024992,
+      "per_token_mean_l2": 0.001074
+    },
+    {
+      "arm": "orthogonal",
+      "epsilon": 0.001,
+      "deviation_frobenius": 0.238022,
+      "per_token_mean_l2": 0.010206
+    },
+    {
+      "arm": "orthogonal",
+      "epsilon": 0.01,
+      "deviation_frobenius": 2.378476,
+      "per_token_mean_l2": 0.101984
+    }
+  ],
+  "verdict_note": "At eps=0.01: deviation_parallel=0.3336 vs deviation_orthogonal=2.3785. Attractor prediction: orthogonal contracts more than parallel (dev_orth < dev_par). -> NOT consistent with a contracting attractor at this neck; report as negative."
+}

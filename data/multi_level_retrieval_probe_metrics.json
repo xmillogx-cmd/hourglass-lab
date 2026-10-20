@@ -1,0 +1,423 @@
+{
+  "model": "qwen2.5-0.5b",
+  "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+  "device": "cuda:1",
+  "gpu_free_gib_at_start": 14.8,
+  "haystack_len": 2048,
+  "positions": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "n_reps_per_cell": 3,
+  "filler_source": "local DOC_FILES (cmq_experiment README/PROJECT/FINAL_REPORT_v4/report.md)",
+  "lift_definition": "logit(target first BPE piece) - mean(logits of alt set); alts = analog codes of the same form with distinct first pieces (E4e), fp32 logits, measured at the next-token position after the probe tail",
+  "levels": {
+    "L1_exact": {
+      "p=0.1": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 203,
+            "target_code": "KZVX-9281",
+            "alt_codes": [
+              "XZVX-9281",
+              "YZVX-9281",
+              "KWVX-9281",
+              "KYVX-9281",
+              "WZVX-9281"
+            ],
+            "lift": 6.4974
+          },
+          {
+            "rep": 1,
+            "needle_start": 203,
+            "target_code": "KZVW-9281",
+            "alt_codes": [
+              "WZVW-9281",
+              "CZVW-9281",
+              "MZVW-9281",
+              "JZVW-9281",
+              "DZVW-9281"
+            ],
+            "lift": 7.604
+          },
+          {
+            "rep": 2,
+            "needle_start": 203,
+            "target_code": "KTVX-9281",
+            "alt_codes": [
+              "JTVX-9281",
+              "KNVX-9281",
+              "YTVX-9281",
+              "ETVX-9281",
+              "PTVX-9281"
+            ],
+            "lift": 7.2484
+          }
+        ],
+        "mean_lift": 7.1166
+      },
+      "p=0.5": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 1014,
+            "target_code": "KZVX-9281",
+            "alt_codes": [
+              "XZVX-9281",
+              "YZVX-9281",
+              "KWVX-9281",
+              "KYVX-9281",
+              "WZVX-9281"
+            ],
+            "lift": 6.6242
+          },
+          {
+            "rep": 1,
+            "needle_start": 1014,
+            "target_code": "KZVW-9281",
+            "alt_codes": [
+              "WZVW-9281",
+              "CZVW-9281",
+              "MZVW-9281",
+              "JZVW-9281",
+              "DZVW-9281"
+            ],
+            "lift": 8.1758
+          },
+          {
+            "rep": 2,
+            "needle_start": 1014,
+            "target_code": "KTVX-9281",
+            "alt_codes": [
+              "JTVX-9281",
+              "KNVX-9281",
+              "YTVX-9281",
+              "ETVX-9281",
+              "PTVX-9281"
+            ],
+            "lift": 7.3271
+          }
+        ],
+        "mean_lift": 7.3757
+      },
+      "p=0.9": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 1825,
+            "target_code": "KZVX-9281",
+            "alt_codes": [
+              "XZVX-9281",
+              "YZVX-9281",
+              "KWVX-9281",
+              "KYVX-9281",
+              "WZVX-9281"
+            ],
+            "lift": 5.8766
+          },
+          {
+            "rep": 1,
+            "needle_start": 1825,
+            "target_code": "KZVW-9281",
+            "alt_codes": [
+              "WZVW-9281",
+              "CZVW-9281",
+              "MZVW-9281",
+              "JZVW-9281",
+              "DZVW-9281"
+            ],
+            "lift": 9.4594
+          },
+          {
+            "rep": 2,
+            "needle_start": 1826,
+            "target_code": "KTVX-9281",
+            "alt_codes": [
+              "JTVX-9281",
+              "KNVX-9281",
+              "YTVX-9281",
+              "ETVX-9281",
+              "PTVX-9281"
+            ],
+            "lift": 7.6234
+          }
+        ],
+        "mean_lift": 7.6531
+      }
+    },
+    "L2_semantic": {
+      "p=0.1": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 201,
+            "target_code": "KZVX-9281",
+            "alt_codes": [
+              "JZVX-9281",
+              "EZVX-9281",
+              "KYVX-9281",
+              "TZVX-9281",
+              "CZVX-9281"
+            ],
+            "lift": 6.7867
+          },
+          {
+            "rep": 1,
+            "needle_start": 201,
+            "target_code": "KZVW-9281",
+            "alt_codes": [
+              "FZVW-9281",
+              "JZVW-9281",
+              "KHVW-9281",
+              "NZVW-9281",
+              "KBVW-9281"
+            ],
+            "lift": 5.975
+          },
+          {
+            "rep": 2,
+            "needle_start": 202,
+            "target_code": "KTVX-9281",
+            "alt_codes": [
+              "RTVX-9281",
+              "JTVX-9281",
+              "HTVX-9281",
+              "KTXX-9281",
+              "MTVX-9281"
+            ],
+            "lift": 8.0106
+          }
+        ],
+        "mean_lift": 6.9241
+      },
+      "p=0.5": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 1007,
+            "target_code": "KZVX-9281",
+            "alt_codes": [
+              "JZVX-9281",
+              "EZVX-9281",
+              "KYVX-9281",
+              "TZVX-9281",
+              "CZVX-9281"
+            ],
+            "lift": 7.327
+          },
+          {
+            "rep": 1,
+            "needle_start": 1007,
+            "target_code": "KZVW-9281",
+            "alt_codes": [
+              "FZVW-9281",
+              "JZVW-9281",
+              "KHVW-9281",
+              "NZVW-9281",
+              "KBVW-9281"
+            ],
+            "lift": 6.2938
+          },
+          {
+            "rep": 2,
+            "needle_start": 1008,
+            "target_code": "KTVX-9281",
+            "alt_codes": [
+              "RTVX-9281",
+              "JTVX-9281",
+              "HTVX-9281",
+              "KTXX-9281",
+              "MTVX-9281"
+            ],
+            "lift": 7.9334
+          }
+        ],
+        "mean_lift": 7.1847
+      },
+      "p=0.9": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 1813,
+            "target_code": "KZVX-9281",
+            "alt_codes": [
+              "JZVX-9281",
+              "EZVX-9281",
+              "KYVX-9281",
+              "TZVX-9281",
+              "CZVX-9281"
+            ],
+            "lift": 7.4859
+          },
+          {
+            "rep": 1,
+            "needle_start": 1813,
+            "target_code": "KZVW-9281",
+            "alt_codes": [
+              "FZVW-9281",
+              "JZVW-9281",
+              "KHVW-9281",
+              "NZVW-9281",
+              "KBVW-9281"
+            ],
+            "lift": 6.6266
+          },
+          {
+            "rep": 2,
+            "needle_start": 1814,
+            "target_code": "KTVX-9281",
+            "alt_codes": [
+              "RTVX-9281",
+              "JTVX-9281",
+              "HTVX-9281",
+              "KTXX-9281",
+              "MTVX-9281"
+            ],
+            "lift": 7.6023
+          }
+        ],
+        "mean_lift": 7.2383
+      }
+    },
+    "L3_relational_2hop": {
+      "p=0.1": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 200,
+            "target_code": "9281-B7QW",
+            "alt_codes": [
+              "6281-B7QW",
+              "0281-B7QW",
+              "4281-B7QW",
+              "7281-B7QW",
+              "1281-B7QW"
+            ],
+            "lift": -0.1156
+          },
+          {
+            "rep": 1,
+            "needle_start": 200,
+            "target_code": "9281-H7QW",
+            "alt_codes": [
+              "6281-H7QW",
+              "2281-H7QW",
+              "8281-H7QW",
+              "0281-H7QW",
+              "1281-H7QW"
+            ],
+            "lift": 2.975
+          },
+          {
+            "rep": 2,
+            "needle_start": 200,
+            "target_code": "9281-Y7QW",
+            "alt_codes": [
+              "0281-Y7QW",
+              "5281-Y7QW",
+              "6281-Y7QW",
+              "7281-Y7QW",
+              "3281-Y7QW"
+            ],
+            "lift": 1.5812
+          }
+        ],
+        "mean_lift": 1.4802
+      },
+      "p=0.5": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 1001,
+            "target_code": "9281-B7QW",
+            "alt_codes": [
+              "6281-B7QW",
+              "0281-B7QW",
+              "4281-B7QW",
+              "7281-B7QW",
+              "1281-B7QW"
+            ],
+            "lift": 1.45
+          },
+          {
+            "rep": 1,
+            "needle_start": 1001,
+            "target_code": "9281-H7QW",
+            "alt_codes": [
+              "6281-H7QW",
+              "2281-H7QW",
+              "8281-H7QW",
+              "0281-H7QW",
+              "1281-H7QW"
+            ],
+            "lift": 2.4188
+          },
+          {
+            "rep": 2,
+            "needle_start": 1001,
+            "target_code": "9281-Y7QW",
+            "alt_codes": [
+              "0281-Y7QW",
+              "5281-Y7QW",
+              "6281-Y7QW",
+              "7281-Y7QW",
+              "3281-Y7QW"
+            ],
+            "lift": 1.2625
+          }
+        ],
+        "mean_lift": 1.7104
+      },
+      "p=0.9": {
+        "reps": [
+          {
+            "rep": 0,
+            "needle_start": 1802,
+            "target_code": "9281-B7QW",
+            "alt_codes": [
+              "6281-B7QW",
+              "0281-B7QW",
+              "4281-B7QW",
+              "7281-B7QW",
+              "1281-B7QW"
+            ],
+            "lift": 0.7125
+          },
+          {
+            "rep": 1,
+            "needle_start": 1802,
+            "target_code": "9281-H7QW",
+            "alt_codes": [
+              "6281-H7QW",
+              "2281-H7QW",
+              "8281-H7QW",
+              "0281-H7QW",
+              "1281-H7QW"
+            ],
+            "lift": 2.5187
+          },
+          {
+            "rep": 2,
+            "needle_start": 1802,
+            "target_code": "9281-Y7QW",
+            "alt_codes": [
+              "0281-Y7QW",
+              "5281-Y7QW",
+              "6281-Y7QW",
+              "7281-Y7QW",
+              "3281-Y7QW"
+            ],
+            "lift": 1.45
+          }
+        ],
+        "mean_lift": 1.5604
+      }
+    }
+  },
+  "notes": [
+    "Base model has no instruction QA: all three levels are pattern-completion probes with rephrased continuation templates (same fact, different surface form), not question answering.",
+    "L2 semantic level replaces the spec'd question 'What is the verification code for the client?' with a fill-in continuation eliciting the same target token; this measures retrieval through paraphrase, not instruction compliance."
+  ]
+}

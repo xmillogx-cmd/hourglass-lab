@@ -1,0 +1,90 @@
+{
+  "smollm-135m": {
+    "n_mid": 6,
+    "n_edge": 4,
+    "ic_point_estimate": -0.1912,
+    "ic_stored_in_metrics": -0.1912,
+    "ci95_low": -3.0807,
+    "ci95_high": 2.8328,
+    "bootstrap_std": 1.5145,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.8994
+  },
+  "qwen2.5-0.5b": {
+    "n_mid": 18,
+    "n_edge": 12,
+    "ic_point_estimate": 0.3854,
+    "ic_stored_in_metrics": 0.3854,
+    "ci95_low": -0.5758,
+    "ci95_high": 1.3613,
+    "bootstrap_std": 0.4893,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.5532
+  },
+  "tinyllama-1.1b": {
+    "n_mid": 6,
+    "n_edge": 4,
+    "ic_point_estimate": 0.7055,
+    "ic_stored_in_metrics": 0.7055,
+    "ci95_low": -0.5302,
+    "ci95_high": 2.7255,
+    "bootstrap_std": 0.8792,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.4756
+  },
+  "qwen2.5-3b": {
+    "n_mid": 12,
+    "n_edge": 8,
+    "ic_point_estimate": -1.2865,
+    "ic_stored_in_metrics": -1.2865,
+    "ci95_low": -2.5651,
+    "ci95_high": 0.1328,
+    "bootstrap_std": 0.6895,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.4984
+  },
+  "qwen3-4b": {
+    "n_mid": 12,
+    "n_edge": 8,
+    "ic_point_estimate": 0.5885,
+    "ic_stored_in_metrics": 0.5885,
+    "ci95_low": -2.0755,
+    "ci95_high": 3.2982,
+    "bootstrap_std": 1.3821,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.6948
+  },
+  "gemma-4-e2b": {
+    "n_mid": 12,
+    "n_edge": 8,
+    "ic_point_estimate": -0.4479,
+    "ic_stored_in_metrics": -0.4479,
+    "ci95_low": -3.7135,
+    "ci95_high": 2.6173,
+    "bootstrap_std": 1.6485,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.7928
+  },
+  "pythia-2.8b": {
+    "n_mid": 6,
+    "n_edge": 4,
+    "ic_point_estimate": 0.5703,
+    "ic_stored_in_metrics": 0.5703,
+    "ci95_low": -1.2969,
+    "ci95_high": 2.375,
+    "bootstrap_std": 0.9424,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.627
+  },
+  "phi-1_5": {
+    "n_mid": 6,
+    "n_edge": 4,
+    "ic_point_estimate": 1.237,
+    "ic_stored_in_metrics": 1.237,
+    "ci95_low": -1.8876,
+    "ci95_high": 3.9993,
+    "bootstrap_std": 1.4995,
+    "excludes_zero_at_005": false,
+    "p_two_sided_vs_zero": 0.5709
+  }
+}

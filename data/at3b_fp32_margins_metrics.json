@@ -1,0 +1,1298 @@
+{
+  "smollm-135m": {
+    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 30,
+    "selected_layers": [
+      2,
+      6,
+      10,
+      14,
+      19,
+      23,
+      26,
+      29
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_smollm-135m.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "6": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "10": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "14": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.005859
+        }
+      },
+      "19": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "23": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.003906
+        },
+        "0.0013": {
+          "flip_rate": 0.003906
+        }
+      },
+      "26": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.003906
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "29": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.001045,
+      "lf_hat_max_ratio": 30.896323,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 29, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 0.000119,
+      "lf_hat_max_ratio": 78.378405,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  },
+  "qwen2.5-0.5b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 24,
+    "selected_layers": [
+      2,
+      5,
+      8,
+      12,
+      15,
+      18,
+      21,
+      23
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_qwen2.5-0.5b.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "5": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.001953
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.003906
+        }
+      },
+      "8": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.003906
+        }
+      },
+      "12": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "15": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "18": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "21": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "23": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.000797,
+      "lf_hat_max_ratio": 29.176985,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 23, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 0.000797,
+      "lf_hat_max_ratio": 54.11693,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  },
+  "tinyllama-1.1b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 22,
+    "selected_layers": [
+      2,
+      4,
+      7,
+      10,
+      14,
+      17,
+      19,
+      21
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_tinyllama-1.1b.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.003906
+        }
+      },
+      "4": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "7": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "10": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "14": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "17": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "19": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "21": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.000233,
+      "lf_hat_max_ratio": 13.280596,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 21, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 3.9e-05,
+      "lf_hat_max_ratio": 137.432643,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  },
+  "qwen2.5-3b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 36,
+    "selected_layers": [
+      3,
+      7,
+      12,
+      18,
+      23,
+      28,
+      32,
+      35
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_qwen2.5-3b.npz"
+    },
+    "singles": {
+      "3": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "7": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "12": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "18": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "23": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "28": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "32": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "35": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.000296,
+      "lf_hat_max_ratio": 15.912737,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 35, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 0.000296,
+      "lf_hat_max_ratio": 62.89262,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  },
+  "qwen3-4b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 36,
+    "selected_layers": [
+      3,
+      7,
+      12,
+      18,
+      23,
+      28,
+      32,
+      35
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_qwen3-4b.npz"
+    },
+    "singles": {
+      "3": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "7": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.003906
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "12": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "18": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "23": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "28": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "32": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "35": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.008753,
+      "lf_hat_max_ratio": 18.025912,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 35, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 0.00037,
+      "lf_hat_max_ratio": 3124.788724,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  },
+  "gemma-4-e2b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 35,
+    "selected_layers": [
+      3,
+      7,
+      12,
+      17,
+      22,
+      27,
+      31,
+      34
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_gemma-4-e2b.npz"
+    },
+    "singles": {
+      "3": {
+        "0.0001": {
+          "flip_rate": 0.064453
+        },
+        "0.0003": {
+          "flip_rate": 0.113281
+        },
+        "0.0007": {
+          "flip_rate": 0.119141
+        },
+        "0.0013": {
+          "flip_rate": 0.189453
+        }
+      },
+      "7": {
+        "0.0001": {
+          "flip_rate": 0.005859
+        },
+        "0.0003": {
+          "flip_rate": 0.013672
+        },
+        "0.0007": {
+          "flip_rate": 0.066406
+        },
+        "0.0013": {
+          "flip_rate": 0.107422
+        }
+      },
+      "12": {
+        "0.0001": {
+          "flip_rate": 0.003906
+        },
+        "0.0003": {
+          "flip_rate": 0.019531
+        },
+        "0.0007": {
+          "flip_rate": 0.070312
+        },
+        "0.0013": {
+          "flip_rate": 0.160156
+        }
+      },
+      "17": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "22": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "27": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "31": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "34": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.000219,
+      "lf_hat_max_ratio": 68.83485,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 34, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 0.000219,
+      "lf_hat_max_ratio": 5248.918533,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  },
+  "pythia-2.8b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 32,
+    "selected_layers": [
+      2,
+      6,
+      11,
+      16,
+      20,
+      25,
+      28,
+      31
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_pythia-2.8b.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0001": {
+          "flip_rate": 0.001953
+        },
+        "0.0003": {
+          "flip_rate": 0.001953
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "6": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "11": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "16": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "20": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "25": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.001953
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "28": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.003906
+        }
+      },
+      "31": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.000131,
+      "lf_hat_max_ratio": 17.035348,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 31, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 0.000114,
+      "lf_hat_max_ratio": 23.00996,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  },
+  "phi-1_5": {
+    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "device": "cpu",
+    "dtype_used": "torch.float32 (forced — registry dtype overridden; this is the point of AT-3b)",
+    "n_layers": 24,
+    "selected_layers": [
+      2,
+      5,
+      8,
+      12,
+      15,
+      18,
+      21,
+      23
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "deltas_per_layer": [
+        0.0001,
+        0.0003,
+        0.0007000000000000001,
+        0.0013
+      ]
+    },
+    "protocol": "AT-3b: fp32 CPU rerun of the AT-3 margin dumps. base forward (no_grad) + hook injection H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); per-layer delta grid {1e-4, 3e-4, 7e-4, 1.3e-3} (first two resolve the AT-1 dtype-vs-stability confound); deterministic noise seeding torch.manual_seed(20260924 + i*1000 + j*7) per (layer i, delta index j); property = per-position top-1 identity; margins via vals[..., 0] - vals[..., 1] (AT-3's broken (1,2)-shape bug fixed). NO U6 pairs / KL / |dlogits| in this pass.",
+    "L_tokens": 512,
+    "dumps": {
+      "margins": "at3b_margins_phi-1_5.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "5": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "8": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "12": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "15": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.001953
+        }
+      },
+      "18": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "21": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.001953
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      },
+      "23": {
+        "0.0001": {
+          "flip_rate": 0.0
+        },
+        "0.0003": {
+          "flip_rate": 0.0
+        },
+        "0.0007": {
+          "flip_rate": 0.0
+        },
+        "0.0013": {
+          "flip_rate": 0.0
+        }
+      }
+    },
+    "regularity_last_layer": {
+      "tau_hat": 0.000412,
+      "lf_hat_max_ratio": 12.560624,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false,
+      "scope": "last selected layer 23, full S=512 positions, fp32 (AT-4 used K=128 on broken data)"
+    },
+    "regularity_full_stack": {
+      "tau_hat": 9.6e-05,
+      "lf_hat_max_ratio": 16.912733,
+      "cond3_all_ball_margins_nonneg": true,
+      "cond6_delta_le_tau_over_lf": false
+    }
+  }
+}

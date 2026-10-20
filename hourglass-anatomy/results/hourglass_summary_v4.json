@@ -1,0 +1,10 @@
+{
+  "model": "qwen2.5-0.5b (local)",
+  "context": "diverse real docs, 2006 tokens",
+  "mid_layer_index": 12,
+  "cone_dim_K": 63,
+  "residual_d_eff": 221.1,
+  "residual_k95": 411,
+  "residual_top3_energy_share": 0.0309,
+  "residual_top10_energy_share": 0.0981
+}

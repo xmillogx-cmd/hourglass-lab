@@ -1,0 +1,117 @@
+{
+  "task": "E4b follow-up — pressure of mass: DC energy share + token-matrix PR/k95 vs context length; prefix (coherent doc) vs mixed (topic-interference) conditions",
+  "model": {
+    "name": "tied_qwen2_5_0_5b",
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "note": "tied Qwen2.5-0.5B, fp32, physical GPU 1"
+  },
+  "full_corpus_tokens": 8599,
+  "lengths_run": [
+    100,
+    1000,
+    4096,
+    8192
+  ],
+  "conditions": {
+    "prefix": {
+      "100": {
+        "n_tokens": 100,
+        "e_dc": 0.53667,
+        "raw_pr": 2.735,
+        "raw_k95": 27,
+        "centered_pr": 6.113,
+        "centered_k95": 44,
+        "norm_ratio_mean": 0.67029,
+        "raw_cos_to_com_mean": 0.7295,
+        "raw_cos_to_com_std": 0.1747,
+        "centered_pairwise_abs_cos": 0.29209592938423157
+      },
+      "1000": {
+        "n_tokens": 1000,
+        "e_dc": 0.37999,
+        "raw_pr": 4.274,
+        "raw_k95": 104,
+        "centered_pr": 8.304,
+        "centered_k95": 161,
+        "norm_ratio_mean": 0.77831,
+        "raw_cos_to_com_mean": 0.6162,
+        "raw_cos_to_com_std": 0.2173,
+        "centered_pairwise_abs_cos": 0.2745903432369232
+      },
+      "4096": {
+        "n_tokens": 4096,
+        "e_dc": 0.3672,
+        "raw_pr": 4.53,
+        "raw_k95": 137,
+        "centered_pr": 7.663,
+        "centered_k95": 221,
+        "norm_ratio_mean": 0.7825,
+        "raw_cos_to_com_mean": 0.6099,
+        "raw_cos_to_com_std": 0.2032,
+        "centered_pairwise_abs_cos": 0.294015496969223
+      },
+      "8192": {
+        "n_tokens": 8192,
+        "e_dc": 0.37802,
+        "raw_pr": 4.402,
+        "raw_k95": 145,
+        "centered_pr": 8.724,
+        "centered_k95": 243,
+        "norm_ratio_mean": 0.76385,
+        "raw_cos_to_com_mean": 0.6291,
+        "raw_cos_to_com_std": 0.2212,
+        "centered_pairwise_abs_cos": 0.26250749826431274
+      }
+    },
+    "mixed": {
+      "100": {
+        "n_tokens": 100,
+        "e_dc": 0.70959,
+        "raw_pr": 1.859,
+        "raw_k95": 13,
+        "centered_pr": 7.508,
+        "centered_k95": 31,
+        "norm_ratio_mean": 0.50413,
+        "raw_cos_to_com_mean": 0.8494,
+        "raw_cos_to_com_std": 0.1209,
+        "centered_pairwise_abs_cos": 0.26850083470344543
+      },
+      "1000": {
+        "n_tokens": 1000,
+        "e_dc": 0.50451,
+        "raw_pr": 3.153,
+        "raw_k95": 65,
+        "centered_pr": 8.619,
+        "centered_k95": 135,
+        "norm_ratio_mean": 0.67962,
+        "raw_cos_to_com_mean": 0.7236,
+        "raw_cos_to_com_std": 0.1678,
+        "centered_pairwise_abs_cos": 0.2628023028373718
+      },
+      "4096": {
+        "n_tokens": 4096,
+        "e_dc": 0.46171,
+        "raw_pr": 3.499,
+        "raw_k95": 97,
+        "centered_pr": 8.633,
+        "centered_k95": 203,
+        "norm_ratio_mean": 0.70561,
+        "raw_cos_to_com_mean": 0.6941,
+        "raw_cos_to_com_std": 0.1949,
+        "centered_pairwise_abs_cos": 0.25928351283073425
+      },
+      "8192": {
+        "n_tokens": 8192,
+        "e_dc": 0.41476,
+        "raw_pr": 3.964,
+        "raw_k95": 126,
+        "centered_pr": 8.658,
+        "centered_k95": 233,
+        "norm_ratio_mean": 0.7376,
+        "raw_cos_to_com_mean": 0.6577,
+        "raw_cos_to_com_std": 0.2132,
+        "centered_pairwise_abs_cos": 0.2614530622959137
+      }
+    }
+  }
+}

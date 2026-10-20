@@ -1,0 +1,354 @@
+{
+  "note": "desk analysis of exp10_activation_structure_8m.json (CPU only, no new forward)",
+  "ani_pairwise_pearson_r_matrix": {
+    "smollm-135m": [
+      0.0,
+      -0.0395,
+      -0.0236,
+      -0.0422,
+      -0.0617,
+      -0.0734,
+      -0.1042,
+      -0.0036
+    ],
+    "qwen2.5-0.5b": [
+      -0.0395,
+      0.0,
+      -0.4083,
+      0.9171,
+      0.7966,
+      0.2222,
+      0.2184,
+      0.8881
+    ],
+    "tinyllama-1.1b": [
+      -0.0236,
+      -0.4083,
+      0.0,
+      -0.1427,
+      0.0168,
+      0.4425,
+      0.1573,
+      -0.0207
+    ],
+    "qwen2.5-3b": [
+      -0.0422,
+      0.9171,
+      -0.1427,
+      0.0,
+      0.8931,
+      0.3854,
+      0.1552,
+      0.9023
+    ],
+    "qwen3-4b": [
+      -0.0617,
+      0.7966,
+      0.0168,
+      0.8931,
+      0.0,
+      0.6194,
+      0.366,
+      0.9027
+    ],
+    "gemma-4-e2b": [
+      -0.0734,
+      0.2222,
+      0.4425,
+      0.3854,
+      0.6194,
+      0.0,
+      0.3912,
+      0.5146
+    ],
+    "pythia-2.8b": [
+      -0.1042,
+      0.2184,
+      0.1573,
+      0.1552,
+      0.366,
+      0.3912,
+      0.0,
+      0.4631
+    ],
+    "phi-1_5": [
+      -0.0036,
+      0.8881,
+      -0.0207,
+      0.9023,
+      0.9027,
+      0.5146,
+      0.4631,
+      0.0
+    ]
+  },
+  "mean_pair_r_ani": 0.2976,
+  "min_pair_r_ani": -0.4083,
+  "max_pair_r_ani": 0.9171,
+  "pairs_ani": [
+    {
+      "a": "smollm-135m",
+      "b": "qwen2.5-0.5b",
+      "pearson_r_ani": -0.0395
+    },
+    {
+      "a": "smollm-135m",
+      "b": "tinyllama-1.1b",
+      "pearson_r_ani": -0.0236
+    },
+    {
+      "a": "smollm-135m",
+      "b": "qwen2.5-3b",
+      "pearson_r_ani": -0.0422
+    },
+    {
+      "a": "smollm-135m",
+      "b": "qwen3-4b",
+      "pearson_r_ani": -0.0617
+    },
+    {
+      "a": "smollm-135m",
+      "b": "gemma-4-e2b",
+      "pearson_r_ani": -0.0734
+    },
+    {
+      "a": "smollm-135m",
+      "b": "pythia-2.8b",
+      "pearson_r_ani": -0.1042
+    },
+    {
+      "a": "smollm-135m",
+      "b": "phi-1_5",
+      "pearson_r_ani": -0.0036
+    },
+    {
+      "a": "qwen2.5-0.5b",
+      "b": "tinyllama-1.1b",
+      "pearson_r_ani": -0.4083
+    },
+    {
+      "a": "qwen2.5-0.5b",
+      "b": "qwen2.5-3b",
+      "pearson_r_ani": 0.9171
+    },
+    {
+      "a": "qwen2.5-0.5b",
+      "b": "qwen3-4b",
+      "pearson_r_ani": 0.7966
+    },
+    {
+      "a": "qwen2.5-0.5b",
+      "b": "gemma-4-e2b",
+      "pearson_r_ani": 0.2222
+    },
+    {
+      "a": "qwen2.5-0.5b",
+      "b": "pythia-2.8b",
+      "pearson_r_ani": 0.2184
+    },
+    {
+      "a": "qwen2.5-0.5b",
+      "b": "phi-1_5",
+      "pearson_r_ani": 0.8881
+    },
+    {
+      "a": "tinyllama-1.1b",
+      "b": "qwen2.5-3b",
+      "pearson_r_ani": -0.1427
+    },
+    {
+      "a": "tinyllama-1.1b",
+      "b": "qwen3-4b",
+      "pearson_r_ani": 0.0168
+    },
+    {
+      "a": "tinyllama-1.1b",
+      "b": "gemma-4-e2b",
+      "pearson_r_ani": 0.4425
+    },
+    {
+      "a": "tinyllama-1.1b",
+      "b": "pythia-2.8b",
+      "pearson_r_ani": 0.1573
+    },
+    {
+      "a": "tinyllama-1.1b",
+      "b": "phi-1_5",
+      "pearson_r_ani": -0.0207
+    },
+    {
+      "a": "qwen2.5-3b",
+      "b": "qwen3-4b",
+      "pearson_r_ani": 0.8931
+    },
+    {
+      "a": "qwen2.5-3b",
+      "b": "gemma-4-e2b",
+      "pearson_r_ani": 0.3854
+    },
+    {
+      "a": "qwen2.5-3b",
+      "b": "pythia-2.8b",
+      "pearson_r_ani": 0.1552
+    },
+    {
+      "a": "qwen2.5-3b",
+      "b": "phi-1_5",
+      "pearson_r_ani": 0.9023
+    },
+    {
+      "a": "qwen3-4b",
+      "b": "gemma-4-e2b",
+      "pearson_r_ani": 0.6194
+    },
+    {
+      "a": "qwen3-4b",
+      "b": "pythia-2.8b",
+      "pearson_r_ani": 0.366
+    },
+    {
+      "a": "qwen3-4b",
+      "b": "phi-1_5",
+      "pearson_r_ani": 0.9027
+    },
+    {
+      "a": "gemma-4-e2b",
+      "b": "pythia-2.8b",
+      "pearson_r_ani": 0.3912
+    },
+    {
+      "a": "gemma-4-e2b",
+      "b": "phi-1_5",
+      "pearson_r_ani": 0.5146
+    },
+    {
+      "a": "pythia-2.8b",
+      "b": "phi-1_5",
+      "pearson_r_ani": 0.4631
+    }
+  ],
+  "cone_shapes": {
+    "smollm-135m": {
+      "L": 30,
+      "ani_min_level": 30,
+      "ani_min_frac": 1.0,
+      "ani_min_val": 0.3859,
+      "ani_max_level": 29,
+      "ani_max_frac": 0.967,
+      "ani_max_val": 0.7468,
+      "mean_first_half": 0.6685,
+      "mean_second_half": 0.6023
+    },
+    "qwen2.5-0.5b": {
+      "L": 24,
+      "ani_min_level": 1,
+      "ani_min_frac": 0.042,
+      "ani_min_val": 0.1016,
+      "ani_max_level": 22,
+      "ani_max_frac": 0.917,
+      "ani_max_val": 0.5881,
+      "mean_first_half": 0.2462,
+      "mean_second_half": 0.4278
+    },
+    "tinyllama-1.1b": {
+      "L": 22,
+      "ani_min_level": 16,
+      "ani_min_frac": 0.727,
+      "ani_min_val": 0.1528,
+      "ani_max_level": 1,
+      "ani_max_frac": 0.045,
+      "ani_max_val": 0.4104,
+      "mean_first_half": 0.2287,
+      "mean_second_half": 0.1856
+    },
+    "qwen2.5-3b": {
+      "L": 36,
+      "ani_min_level": 1,
+      "ani_min_frac": 0.028,
+      "ani_min_val": 0.1798,
+      "ani_max_level": 35,
+      "ani_max_frac": 0.972,
+      "ani_max_val": 0.692,
+      "mean_first_half": 0.2839,
+      "mean_second_half": 0.432
+    },
+    "qwen3-4b": {
+      "L": 36,
+      "ani_min_level": 10,
+      "ani_min_frac": 0.278,
+      "ani_min_val": 0.3049,
+      "ani_max_level": 35,
+      "ani_max_frac": 0.972,
+      "ani_max_val": 0.7001,
+      "mean_first_half": 0.3904,
+      "mean_second_half": 0.4903
+    },
+    "gemma-4-e2b": {
+      "L": 35,
+      "ani_min_level": 12,
+      "ani_min_frac": 0.343,
+      "ani_min_val": 0.2003,
+      "ani_max_level": 1,
+      "ani_max_frac": 0.029,
+      "ani_max_val": 0.8689,
+      "mean_first_half": 0.5023,
+      "mean_second_half": 0.6086
+    },
+    "pythia-2.8b": {
+      "L": 32,
+      "ani_min_level": 32,
+      "ani_min_frac": 1.0,
+      "ani_min_val": 0.3314,
+      "ani_max_level": 25,
+      "ani_max_frac": 0.781,
+      "ani_max_val": 0.7585,
+      "mean_first_half": 0.5985,
+      "mean_second_half": 0.6675
+    },
+    "phi-1_5": {
+      "L": 24,
+      "ani_min_level": 10,
+      "ani_min_frac": 0.417,
+      "ani_min_val": 0.1331,
+      "ani_max_level": 23,
+      "ani_max_frac": 0.958,
+      "ani_max_val": 0.3858,
+      "mean_first_half": 0.1482,
+      "mean_second_half": 0.2401
+    }
+  },
+  "prc_vs_ani_within_model_correlation": {
+    "smollm-135m": 0.3302,
+    "qwen2.5-0.5b": -0.068,
+    "tinyllama-1.1b": 0.7755,
+    "qwen2.5-3b": 0.0539,
+    "qwen3-4b": -0.0309,
+    "gemma-4-e2b": -0.5528,
+    "pythia-2.8b": 0.4916,
+    "phi-1_5": 0.4889
+  },
+  "gemma_attention_split": {
+    "global_levels_1based": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35
+    ],
+    "sliding_window": 512,
+    "num_kv_shared_layers": 20,
+    "mean_prc_global": 62.541,
+    "mean_prc_local": 60.694,
+    "prc_at_global_levels": {
+      "5": 77.271,
+      "10": 119.611,
+      "15": 45.953,
+      "20": 84.398,
+      "25": 52.354,
+      "30": 39.819,
+      "35": 18.379
+    }
+  }
+}

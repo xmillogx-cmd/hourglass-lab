@@ -1,0 +1,336 @@
+{
+  "smollm-135m": {
+    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "dtype": "torch.float32",
+    "n_reps": 5,
+    "protocol": "tied G_in/G_out decomposition (multi-rep)",
+    "cos_mean": -0.0616,
+    "cos_std": 0.0397,
+    "ratio_mean": 4.8092,
+    "ratio_std": 0.9515,
+    "per_rep": [
+      {
+        "rep": 0,
+        "offset": 6119,
+        "cos": -0.0677,
+        "ratio": 4.7774,
+        "cos_gtotal_vs_gin": 0.1405421060853374
+      },
+      {
+        "rep": 1,
+        "offset": 8611,
+        "cos": -0.1191,
+        "ratio": 5.7276,
+        "cos_gtotal_vs_gin": 0.05581645942163975
+      },
+      {
+        "rep": 2,
+        "offset": 9853,
+        "cos": -0.0106,
+        "ratio": 5.2681,
+        "cos_gtotal_vs_gin": 0.1764032409447655
+      },
+      {
+        "rep": 3,
+        "offset": 9812,
+        "cos": -0.0674,
+        "ratio": 5.0479,
+        "cos_gtotal_vs_gin": 0.12992548980531524
+      },
+      {
+        "rep": 4,
+        "offset": 1433,
+        "cos": -0.0432,
+        "ratio": 3.2251,
+        "cos_gtotal_vs_gin": 0.25809925765895725
+      }
+    ]
+  },
+  "qwen2.5-0.5b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "dtype": "torch.float32",
+    "n_reps": 5,
+    "protocol": "tied G_in/G_out decomposition (multi-rep)",
+    "cos_mean": -0.031,
+    "cos_std": 0.077,
+    "ratio_mean": 4.0333,
+    "ratio_std": 0.8873,
+    "per_rep": [
+      {
+        "rep": 0,
+        "offset": 5209,
+        "cos": -0.1063,
+        "ratio": 4.9408,
+        "cos_gtotal_vs_gin": 0.09621630659975415
+      },
+      {
+        "rep": 1,
+        "offset": 7329,
+        "cos": -0.1165,
+        "ratio": 3.5038,
+        "cos_gtotal_vs_gin": 0.1676629696534337
+      },
+      {
+        "rep": 2,
+        "offset": 8387,
+        "cos": 0.0044,
+        "ratio": 4.6735,
+        "cos_gtotal_vs_gin": 0.21338481481029414
+      },
+      {
+        "rep": 3,
+        "offset": 8352,
+        "cos": 0.0603,
+        "ratio": 4.2714,
+        "cos_gtotal_vs_gin": 0.2829049377444106
+      },
+      {
+        "rep": 4,
+        "offset": 1219,
+        "cos": 0.0028,
+        "ratio": 2.7769,
+        "cos_gtotal_vs_gin": 0.34117260801751653
+      }
+    ]
+  },
+  "tinyllama-1.1b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "dtype": "torch.float32",
+    "n_reps": 5,
+    "protocol": "untied baseline (multi-rep)",
+    "cos_mean": -0.0047,
+    "cos_std": 0.0016,
+    "ratio_mean": 1.5,
+    "ratio_std": 0.0817,
+    "per_rep": [
+      {
+        "rep": 0,
+        "offset": 6120,
+        "cos": -0.0031,
+        "ratio": 1.5228,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 1,
+        "offset": 8612,
+        "cos": -0.0066,
+        "ratio": 1.4752,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 2,
+        "offset": 9855,
+        "cos": -0.0052,
+        "ratio": 1.5017,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 3,
+        "offset": 9814,
+        "cos": -0.0057,
+        "ratio": 1.6133,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 4,
+        "offset": 1433,
+        "cos": -0.0031,
+        "ratio": 1.3873,
+        "cos_gtotal_vs_gin": null
+      }
+    ]
+  },
+  "qwen2.5-3b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "dtype": "torch.bfloat16",
+    "n_reps": 5,
+    "protocol": "tied G_in/G_out decomposition (multi-rep)",
+    "cos_mean": -0.0077,
+    "cos_std": 0.0274,
+    "ratio_mean": 5.1568,
+    "ratio_std": 1.4997,
+    "per_rep": [
+      {
+        "rep": 0,
+        "offset": 5209,
+        "cos": -0.0138,
+        "ratio": 7.0199,
+        "cos_gtotal_vs_gin": 0.12750532398023826
+      },
+      {
+        "rep": 1,
+        "offset": 7329,
+        "cos": 0.0248,
+        "ratio": 3.5631,
+        "cos_gtotal_vs_gin": 0.29204656446402444
+      },
+      {
+        "rep": 2,
+        "offset": 8387,
+        "cos": -0.0496,
+        "ratio": 4.0582,
+        "cos_gtotal_vs_gin": 0.19341266149441447
+      },
+      {
+        "rep": 3,
+        "offset": 8352,
+        "cos": -0.0039,
+        "ratio": 6.4184,
+        "cos_gtotal_vs_gin": 0.1500268152000728
+      },
+      {
+        "rep": 4,
+        "offset": 1219,
+        "cos": 0.0041,
+        "ratio": 4.7246,
+        "cos_gtotal_vs_gin": 0.2109767298870514
+      }
+    ]
+  },
+  "qwen3-4b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "dtype": "torch.bfloat16",
+    "n_reps": 5,
+    "protocol": "tied G_in/G_out decomposition (multi-rep)",
+    "cos_mean": -0.0306,
+    "cos_std": 0.0357,
+    "ratio_mean": 4.0835,
+    "ratio_std": 1.5661,
+    "per_rep": [
+      {
+        "rep": 0,
+        "offset": 5209,
+        "cos": -0.0755,
+        "ratio": 2.7636,
+        "cos_gtotal_vs_gin": 0.27579303668410493
+      },
+      {
+        "rep": 1,
+        "offset": 7329,
+        "cos": -0.0327,
+        "ratio": 3.2966,
+        "cos_gtotal_vs_gin": 0.2611692669370796
+      },
+      {
+        "rep": 2,
+        "offset": 8387,
+        "cos": -0.0544,
+        "ratio": 6.6745,
+        "cos_gtotal_vs_gin": 0.09500990187117593
+      },
+      {
+        "rep": 3,
+        "offset": 8352,
+        "cos": 0.0077,
+        "ratio": 3.2851,
+        "cos_gtotal_vs_gin": 0.2979630693022184
+      },
+      {
+        "rep": 4,
+        "offset": 1219,
+        "cos": 0.0018,
+        "ratio": 4.3975,
+        "cos_gtotal_vs_gin": 0.22340169139966967
+      }
+    ]
+  },
+  "gemma-4-e2b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "dtype": "torch.bfloat16",
+    "status": "skipped (OutOfMemoryError: CUDA out of memory. Tried to allocate 1.50 GiB. GPU 1 has a total capacity of 15.93 GiB of which 922.02 MiB is free. Of the allocated memory 12.06 GiB is allocated by PyTorch, and 1.64 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf))"
+  },
+  "pythia-2.8b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "dtype": "torch.bfloat16",
+    "n_reps": 5,
+    "protocol": "untied baseline (multi-rep)",
+    "cos_mean": -0.0046,
+    "cos_std": 0.0026,
+    "ratio_mean": 2.3024,
+    "ratio_std": 0.1287,
+    "per_rep": [
+      {
+        "rep": 0,
+        "offset": 5355,
+        "cos": -0.0028,
+        "ratio": 2.2992,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 1,
+        "offset": 7536,
+        "cos": -0.0077,
+        "ratio": 2.3556,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 2,
+        "offset": 8623,
+        "cos": -0.0066,
+        "ratio": 2.4815,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 3,
+        "offset": 8587,
+        "cos": -0.0047,
+        "ratio": 2.1372,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 4,
+        "offset": 1254,
+        "cos": -0.0014,
+        "ratio": 2.2388,
+        "cos_gtotal_vs_gin": null
+      }
+    ]
+  },
+  "phi-1_5": {
+    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "dtype": "torch.float32",
+    "n_reps": 5,
+    "protocol": "untied baseline (multi-rep)",
+    "cos_mean": -0.0006,
+    "cos_std": 0.0023,
+    "ratio_mean": 2.5572,
+    "ratio_std": 0.1223,
+    "per_rep": [
+      {
+        "rep": 0,
+        "offset": 5852,
+        "cos": 0.0028,
+        "ratio": 2.4753,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 1,
+        "offset": 8235,
+        "cos": 0.0007,
+        "ratio": 2.7632,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 2,
+        "offset": 9423,
+        "cos": -0.0009,
+        "ratio": 2.5667,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 3,
+        "offset": 9384,
+        "cos": -0.0031,
+        "ratio": 2.5185,
+        "cos_gtotal_vs_gin": null
+      },
+      {
+        "rep": 4,
+        "offset": 1370,
+        "cos": -0.0022,
+        "ratio": 2.462,
+        "cos_gtotal_vs_gin": null
+      }
+    ]
+  }
+}

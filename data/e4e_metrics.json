@@ -1,0 +1,399 @@
+{
+  "task": "E4e follow-up — needle-in-haystack functional test (base-model pattern-completion logit probe): does the model USE far context?",
+  "model": {
+    "name": "tied_qwen2_5_0_5b",
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "note": "tied Qwen2.5-0.5B base, fp32, physical GPU 1"
+  },
+  "probe_template": " The verification code for this record is",
+  "codes": [
+    "KZVX-9281",
+    "QWRT-3574",
+    "MNPB-6019"
+  ],
+  "lengths_run": [
+    100,
+    500,
+    1000,
+    2048,
+    4096,
+    8192
+  ],
+  "positions": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+  ],
+  "cells": {
+    "100_p0.1": {
+      "length": 100,
+      "position": 0.1,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 9.2046,
+      "p_win": 0.9999,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6369,
+      "lift_vs_control": 8.5677
+    },
+    "100_p0.25": {
+      "length": 100,
+      "position": 0.25,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 8.6681,
+      "p_win": 0.99983,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6369,
+      "lift_vs_control": 8.0312
+    },
+    "100_p0.5": {
+      "length": 100,
+      "position": 0.5,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 5.854,
+      "p_win": 0.99712,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6369,
+      "lift_vs_control": 5.2171
+    },
+    "100_p0.75": {
+      "length": 100,
+      "position": 0.75,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 5.2626,
+      "p_win": 0.99484,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6369,
+      "lift_vs_control": 4.6257
+    },
+    "100_p0.9": {
+      "length": 100,
+      "position": 0.9,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 6.3966,
+      "p_win": 0.99832,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6369,
+      "lift_vs_control": 5.7597
+    },
+    "500_p0.1": {
+      "length": 500,
+      "position": 0.1,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 8.6056,
+      "p_win": 0.99981,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.668,
+      "lift_vs_control": 6.9376
+    },
+    "500_p0.25": {
+      "length": 500,
+      "position": 0.25,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 8.1095,
+      "p_win": 0.99967,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.668,
+      "lift_vs_control": 6.4415
+    },
+    "500_p0.5": {
+      "length": 500,
+      "position": 0.5,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 8.7242,
+      "p_win": 0.99983,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.668,
+      "lift_vs_control": 7.0562
+    },
+    "500_p0.75": {
+      "length": 500,
+      "position": 0.75,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 9.6773,
+      "p_win": 0.99993,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.668,
+      "lift_vs_control": 8.0093
+    },
+    "500_p0.9": {
+      "length": 500,
+      "position": 0.9,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 7.9293,
+      "p_win": 0.99964,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.668,
+      "lift_vs_control": 6.2613
+    },
+    "1000_p0.1": {
+      "length": 1000,
+      "position": 0.1,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 6.3343,
+      "p_win": 0.99822,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.0568,
+      "lift_vs_control": 5.2775
+    },
+    "1000_p0.25": {
+      "length": 1000,
+      "position": 0.25,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 4.1892,
+      "p_win": 0.98504,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.0568,
+      "lift_vs_control": 3.1324
+    },
+    "1000_p0.5": {
+      "length": 1000,
+      "position": 0.5,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 9.2748,
+      "p_win": 0.9999,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.0568,
+      "lift_vs_control": 8.218
+    },
+    "1000_p0.75": {
+      "length": 1000,
+      "position": 0.75,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 5.6004,
+      "p_win": 0.9963,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.0568,
+      "lift_vs_control": 4.5436
+    },
+    "1000_p0.9": {
+      "length": 1000,
+      "position": 0.9,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 4.8696,
+      "p_win": 0.99233,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 1.0568,
+      "lift_vs_control": 3.8128
+    },
+    "2048_p0.1": {
+      "length": 2048,
+      "position": 0.1,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 6.6127,
+      "p_win": 0.99865,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.4493,
+      "lift_vs_control": 6.1634
+    },
+    "2048_p0.25": {
+      "length": 2048,
+      "position": 0.25,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 6.7998,
+      "p_win": 0.99888,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.4493,
+      "lift_vs_control": 6.3505
+    },
+    "2048_p0.5": {
+      "length": 2048,
+      "position": 0.5,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 8.2298,
+      "p_win": 0.99972,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.4493,
+      "lift_vs_control": 7.7805
+    },
+    "2048_p0.75": {
+      "length": 2048,
+      "position": 0.75,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 6.1613,
+      "p_win": 0.99789,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.4493,
+      "lift_vs_control": 5.712
+    },
+    "2048_p0.9": {
+      "length": 2048,
+      "position": 0.9,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 6.2939,
+      "p_win": 0.99814,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.4493,
+      "lift_vs_control": 5.8446
+    },
+    "4096_p0.1": {
+      "length": 4096,
+      "position": 0.1,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 6.3888,
+      "p_win": 0.99831,
+      "argmax_hit": 1,
+      "control_dlogit_generic": -0.5316,
+      "lift_vs_control": 6.9204
+    },
+    "4096_p0.25": {
+      "length": 4096,
+      "position": 0.25,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 3.3025,
+      "p_win": 0.9645,
+      "argmax_hit": 1,
+      "control_dlogit_generic": -0.5316,
+      "lift_vs_control": 3.8341
+    },
+    "4096_p0.5": {
+      "length": 4096,
+      "position": 0.5,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 7.8351,
+      "p_win": 0.9996,
+      "argmax_hit": 1,
+      "control_dlogit_generic": -0.5316,
+      "lift_vs_control": 8.3667
+    },
+    "4096_p0.75": {
+      "length": 4096,
+      "position": 0.75,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 6.9602,
+      "p_win": 0.99904,
+      "argmax_hit": 1,
+      "control_dlogit_generic": -0.5316,
+      "lift_vs_control": 7.4918
+    },
+    "4096_p0.9": {
+      "length": 4096,
+      "position": 0.9,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 5.3611,
+      "p_win": 0.99532,
+      "argmax_hit": 1,
+      "control_dlogit_generic": -0.5316,
+      "lift_vs_control": 5.8927
+    },
+    "8192_p0.1": {
+      "length": 8192,
+      "position": 0.1,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 6.02,
+      "p_win": 0.99757,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6132,
+      "lift_vs_control": 5.4068
+    },
+    "8192_p0.25": {
+      "length": 8192,
+      "position": 0.25,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 6.9622,
+      "p_win": 0.99904,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6132,
+      "lift_vs_control": 6.349
+    },
+    "8192_p0.5": {
+      "length": 8192,
+      "position": 0.5,
+      "target_code": "KZVX-9281",
+      "alt_code": "QWRT-3574",
+      "dlogit": 6.387,
+      "p_win": 0.99831,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6132,
+      "lift_vs_control": 5.7738
+    },
+    "8192_p0.75": {
+      "length": 8192,
+      "position": 0.75,
+      "target_code": "QWRT-3574",
+      "alt_code": "MNPB-6019",
+      "dlogit": 7.0404,
+      "p_win": 0.99911,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6132,
+      "lift_vs_control": 6.4272
+    },
+    "8192_p0.9": {
+      "length": 8192,
+      "position": 0.9,
+      "target_code": "MNPB-6019",
+      "alt_code": "KZVX-9281",
+      "dlogit": 6.797,
+      "p_win": 0.99887,
+      "argmax_hit": 1,
+      "control_dlogit_generic": 0.6132,
+      "lift_vs_control": 6.1838
+    }
+  },
+  "summary_by_length": {
+    "100": {
+      "mean_lift": 6.4403,
+      "min_lift": 4.6257,
+      "max_lift": 8.5677,
+      "argmax_hits": 5
+    },
+    "500": {
+      "mean_lift": 6.9412,
+      "min_lift": 6.2613,
+      "max_lift": 8.0093,
+      "argmax_hits": 5
+    },
+    "1000": {
+      "mean_lift": 4.9969,
+      "min_lift": 3.1324,
+      "max_lift": 8.218,
+      "argmax_hits": 5
+    },
+    "2048": {
+      "mean_lift": 6.3702,
+      "min_lift": 5.712,
+      "max_lift": 7.7805,
+      "argmax_hits": 5
+    },
+    "4096": {
+      "mean_lift": 6.5011,
+      "min_lift": 3.8341,
+      "max_lift": 8.3667,
+      "argmax_hits": 5
+    },
+    "8192": {
+      "mean_lift": 6.0281,
+      "min_lift": 5.4068,
+      "max_lift": 6.4272,
+      "argmax_hits": 5
+    }
+  }
+}

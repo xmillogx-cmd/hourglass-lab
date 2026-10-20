@@ -1,0 +1,50 @@
+{
+  "model": "qwen2.5-0.5b (local)",
+  "hidden_dim": 896,
+  "tie_word_embeddings": true,
+  "num_hidden_layers": 24,
+  "max_position_embeddings": 32768,
+  "experiment_1_narrow_cone": {
+    "vocab_size": 151936,
+    "hidden_dim": 896,
+    "d_eff_participation_ratio": 447.02,
+    "k95_full_svd": 798,
+    "k95_top100_truncated": 101,
+    "full_svd_exact": true,
+    "sigma_top5": [
+      29.957,
+      13.961,
+      13.54,
+      10.872,
+      10.705
+    ]
+  },
+  "experiment_2_pressure_of_mass": {
+    "context_A_repetitive": {
+      "n_tokens": 2006,
+      "mean_sim": 0.8252,
+      "std_sim": 0.0905,
+      "min_sim": 0.5712,
+      "max_sim": 0.9304,
+      "pos_vs_sim_correlation": -0.0764,
+      "first50_mean": 0.7948,
+      "last50_mean": 0.8098
+    },
+    "context_B_diverse_docs": {
+      "n_tokens": 2006,
+      "mean_sim": 0.6255,
+      "std_sim": 0.1854,
+      "min_sim": -0.2296,
+      "max_sim": 0.9101,
+      "pos_vs_sim_correlation": 0.1242,
+      "first50_mean": 0.617,
+      "last50_mean": 0.6643
+    }
+  },
+  "experiment_3_anisotropy": {
+    "mean_abs_cos_raw": 0.1593,
+    "mean_cos_raw": 0.1575,
+    "mean_cos_centered": 0.0009,
+    "n_pairs_sampled": 2000
+  }
+}

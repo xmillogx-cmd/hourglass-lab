@@ -1,0 +1,88 @@
+{
+  "model": "qwen2.5-0.5b (local)",
+  "hidden_dim": 896,
+  "num_hidden_layers": 24,
+  "tie_word_embeddings": true,
+  "context": "diverse real docs, 2006 tokens (same as v1 context B)",
+  "experiment_1_hourglass_neck": {
+    "n_hidden_states": 25,
+    "top3_var_pct_per_layer": [
+      25.01,
+      11.59,
+      12.91,
+      74.94,
+      93.16,
+      91.99,
+      91.9,
+      90.76,
+      89.64,
+      88.77,
+      88.31,
+      87.79,
+      87.43,
+      86.82,
+      85.75,
+      84.02,
+      81.87,
+      75.01,
+      70.47,
+      66.21,
+      59.17,
+      50.81,
+      14.94,
+      14.52,
+      51.04
+    ],
+    "mean_abs_cos_per_layer": [
+      0.1245,
+      0.0919,
+      0.2554,
+      0.2591,
+      0.2467,
+      0.2088,
+      0.2516,
+      0.2832,
+      0.2966,
+      0.2815,
+      0.2588,
+      0.2574,
+      0.281,
+      0.2908,
+      0.28,
+      0.3166,
+      0.3596,
+      0.3072,
+      0.4166,
+      0.4414,
+      0.444,
+      0.5084,
+      0.6008,
+      0.5776,
+      0.4001
+    ],
+    "neck_layer_index": 4,
+    "neck_top3_var_pct": 93.16
+  },
+  "experiment_2_law_vs_trajectory": {
+    "mid_block_index": 11,
+    "weight_matrix_shape": [
+      4864,
+      896
+    ],
+    "activation_matrix_shape": [
+      2006,
+      896
+    ],
+    "weights_k95": 728,
+    "weights_n_sv": 896,
+    "weights_top3_energy_share": 0.0253,
+    "activations_k95": 62,
+    "activations_n_sv": 896,
+    "activations_top3_energy_share": 0.8779
+  },
+  "experiment_3_structureless_noise": {
+    "mid_layer_index": 12,
+    "mean_abs_cos_cone_raw": 0.281,
+    "mean_abs_cos_residual": 0.0698
+  }
+}

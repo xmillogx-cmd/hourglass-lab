@@ -1,0 +1,136 @@
+{
+  "smollm-135m": {
+    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "dtype": "torch.float32",
+    "n_boot": 25,
+    "reference_neck": 12,
+    "fraction_match_reference": 0.76,
+    "neck_mode": 12,
+    "mode_fraction": 0.76,
+    "neck_mean": 12.24,
+    "neck_std": 0.436,
+    "neck_min": 12,
+    "neck_max": 13,
+    "neck_distribution": {
+      "12": 19,
+      "13": 6
+    }
+  },
+  "qwen2.5-0.5b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "dtype": "torch.float32",
+    "n_boot": 25,
+    "reference_neck": 4,
+    "fraction_match_reference": 1.0,
+    "neck_mode": 4,
+    "mode_fraction": 1.0,
+    "neck_mean": 4.0,
+    "neck_std": 0.0,
+    "neck_min": 4,
+    "neck_max": 4,
+    "neck_distribution": {
+      "4": 25
+    }
+  },
+  "tinyllama-1.1b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "dtype": "torch.float32",
+    "n_boot": 25,
+    "reference_neck": 3,
+    "fraction_match_reference": 1.0,
+    "neck_mode": 3,
+    "mode_fraction": 1.0,
+    "neck_mean": 3.0,
+    "neck_std": 0.0,
+    "neck_min": 3,
+    "neck_max": 3,
+    "neck_distribution": {
+      "3": 25
+    }
+  },
+  "qwen2.5-3b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "dtype": "torch.bfloat16",
+    "n_boot": 25,
+    "reference_neck": 3,
+    "fraction_match_reference": 1.0,
+    "neck_mode": 3,
+    "mode_fraction": 1.0,
+    "neck_mean": 3.0,
+    "neck_std": 0.0,
+    "neck_min": 3,
+    "neck_max": 3,
+    "neck_distribution": {
+      "3": 25
+    }
+  },
+  "qwen3-4b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "dtype": "torch.bfloat16",
+    "n_boot": 25,
+    "reference_neck": 17,
+    "fraction_match_reference": 0.04,
+    "neck_mode": 7,
+    "mode_fraction": 0.96,
+    "neck_mean": 7.4,
+    "neck_std": 2.0,
+    "neck_min": 7,
+    "neck_max": 17,
+    "neck_distribution": {
+      "7": 24,
+      "17": 1
+    }
+  },
+  "gemma-4-e2b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "dtype": "torch.bfloat16",
+    "n_boot": 25,
+    "reference_neck": 35,
+    "fraction_match_reference": 1.0,
+    "neck_mode": 35,
+    "mode_fraction": 1.0,
+    "neck_mean": 35.0,
+    "neck_std": 0.0,
+    "neck_min": 35,
+    "neck_max": 35,
+    "neck_distribution": {
+      "35": 25
+    }
+  },
+  "pythia-2.8b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "dtype": "torch.bfloat16",
+    "n_boot": 25,
+    "reference_neck": 6,
+    "fraction_match_reference": 0.88,
+    "neck_mode": 6,
+    "mode_fraction": 0.88,
+    "neck_mean": 8.04,
+    "neck_std": 7.214,
+    "neck_min": 5,
+    "neck_max": 32,
+    "neck_distribution": {
+      "5": 1,
+      "6": 22,
+      "32": 2
+    }
+  },
+  "phi-1_5": {
+    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "dtype": "torch.float32",
+    "n_boot": 25,
+    "reference_neck": 4,
+    "fraction_match_reference": 0.68,
+    "neck_mode": 4,
+    "mode_fraction": 0.68,
+    "neck_mean": 3.84,
+    "neck_std": 0.554,
+    "neck_min": 3,
+    "neck_max": 5,
+    "neck_distribution": {
+      "3": 6,
+      "4": 17,
+      "5": 2
+    }
+  }
+}

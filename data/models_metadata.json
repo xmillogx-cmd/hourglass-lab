@@ -1,0 +1,134 @@
+{
+  "task": "Step 0 — metadata recon for the cross-model extension: hidden_size / num_hidden_layers / tie_word_embeddings / vocab_size + max_position_embeddings + exact parameter count per model",
+  "date": "2026-09-16",
+  "models": {
+    "smollm-135m": {
+      "model_type": "llama",
+      "architectures": [
+        "LlamaForCausalLM"
+      ],
+      "hidden_size": 576,
+      "num_hidden_layers": 30,
+      "tie_word_embeddings": true,
+      "vocab_size": 49152,
+      "max_position_embeddings": 2048,
+      "transformers_version_saved_with": "4.41.2",
+      "params": {
+        "exact": 134515008
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m"
+    },
+    "qwen2.5-0.5b": {
+      "model_type": "qwen2",
+      "architectures": [
+        "Qwen2ForCausalLM"
+      ],
+      "hidden_size": 896,
+      "num_hidden_layers": 24,
+      "tie_word_embeddings": true,
+      "vocab_size": 151936,
+      "max_position_embeddings": 32768,
+      "transformers_version_saved_with": "4.40.1",
+      "params": {
+        "exact": 494032768
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b"
+    },
+    "tinyllama-1.1b": {
+      "model_type": "llama",
+      "architectures": [
+        "LlamaForCausalLM"
+      ],
+      "hidden_size": 2048,
+      "num_hidden_layers": 22,
+      "tie_word_embeddings": false,
+      "vocab_size": 32000,
+      "max_position_embeddings": 2048,
+      "transformers_version_saved_with": "4.35.0",
+      "params": {
+        "exact": 1100048384
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b"
+    },
+    "qwen2.5-3b": {
+      "model_type": "qwen2",
+      "architectures": [
+        "Qwen2ForCausalLM"
+      ],
+      "hidden_size": 2048,
+      "num_hidden_layers": 36,
+      "tie_word_embeddings": true,
+      "vocab_size": 151936,
+      "max_position_embeddings": 32768,
+      "transformers_version_saved_with": "4.40.1",
+      "params": {
+        "exact": 3085938688
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b"
+    },
+    "qwen3-4b": {
+      "model_type": "qwen3",
+      "architectures": [
+        "Qwen3ForCausalLM"
+      ],
+      "hidden_size": 2560,
+      "num_hidden_layers": 36,
+      "tie_word_embeddings": true,
+      "vocab_size": 151936,
+      "max_position_embeddings": 40960,
+      "transformers_version_saved_with": "4.51.0",
+      "params": {
+        "exact": 4022468096
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b"
+    },
+    "gemma-4-e2b": {
+      "model_type": "gemma4",
+      "architectures": [
+        "Gemma4ForConditionalGeneration"
+      ],
+      "hidden_size": 1536,
+      "num_hidden_layers": 35,
+      "tie_word_embeddings": true,
+      "vocab_size": 262144,
+      "max_position_embeddings": 131072,
+      "transformers_version_saved_with": "5.5.0.dev0",
+      "params": {
+        "exact": 5123178979
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b"
+    },
+    "pythia-2.8b": {
+      "model_type": "gpt_neox",
+      "architectures": [
+        "GPTNeoXForCausalLM"
+      ],
+      "hidden_size": 2560,
+      "num_hidden_layers": 32,
+      "tie_word_embeddings": false,
+      "vocab_size": 50304,
+      "max_position_embeddings": 2048,
+      "transformers_version_saved_with": "4.24.0",
+      "params": {
+        "exact": 2909427040
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b"
+    },
+    "phi-1_5": {
+      "model_type": "phi",
+      "architectures": [
+        "PhiForCausalLM"
+      ],
+      "hidden_size": 2048,
+      "num_hidden_layers": 24,
+      "tie_word_embeddings": false,
+      "vocab_size": 51200,
+      "max_position_embeddings": 2048,
+      "transformers_version_saved_with": "4.37.0",
+      "params": {
+        "exact": 1418270720
+      },
+      "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5"
+    }
+  }
+}

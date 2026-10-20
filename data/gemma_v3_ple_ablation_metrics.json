@@ -1,0 +1,29 @@
+{
+  "gemma-4-e2b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "gpu_used": "cuda:1",
+    "gpu_free_gib_at_start": 14.8,
+    "protocol": "same as Part B of run_gemma_functional_impact.py (bf16, exp7 G_in/G_out); v3 additionally zeros the PLE token-identity table in-place (backup on CPU RAM, restored after)",
+    "v2_scale_stripped_ple_intact": {
+      "norm_gin": 123.218,
+      "norm_gout": 21.144,
+      "ratio_gin_over_gout": 5.828,
+      "cos_gin_vs_gout": -0.01
+    },
+    "v3_scale_stripped_ple_identity_zeroed": {
+      "norm_gin": 67.36,
+      "norm_gout": 15.735,
+      "ratio_gin_over_gout": 4.281,
+      "cos_gin_vs_gout": -0.0016
+    },
+    "ple_facts": {
+      "weight_shape": [
+        262144,
+        8960
+      ],
+      "params_millions": 2348.8,
+      "embed_scale": 16.0
+    },
+    "decision_rule_result": "Residual is NOT PLE-driven: stripped ratio 5.83 vs 4.28 with PLE identity zeroed — attribute to stack depth / softcap dynamics."
+  }
+}

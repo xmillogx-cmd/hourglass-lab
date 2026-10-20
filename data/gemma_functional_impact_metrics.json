@@ -1,0 +1,86 @@
+{
+  "gemma-4-e2b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "gpu_used": "cuda:1",
+    "gpu_free_gib_at_start": 14.8,
+    "architectural_facts": {
+      "embed_scale_s": 39.1918,
+      "s_formula": "sqrt(hidden_size) = sqrt(1536)",
+      "hidden_size": 1536,
+      "vocab_size": 262144,
+      "tie_confirmed_same_data_ptr": true,
+      "ple": {
+        "exists": true,
+        "weight_shape": [
+          262144,
+          8960
+        ],
+        "params_millions": 2348.8,
+        "embed_scale": 16.0
+      }
+    },
+    "with_scale": {
+      "norm_gin": 658.907,
+      "norm_gout": 13.974,
+      "ratio_gin_over_gout": 47.154,
+      "cos_gin_vs_gout": 0.0227,
+      "ple_grad_note": "PLE gradient not measured: its ~4.7 GB bf16 buffer does not fit one 16 GiB card alongside the full multimodal weights; PLE kept out of the grad target set (exp7 protocol)"
+    },
+    "scale_stripped": {
+      "norm_gin_p": 123.504,
+      "norm_gout_p": 21.144,
+      "ratio_gin_over_gout": 5.841,
+      "note": "base_hidden changes when h0 is unscaled (nonlinearities: attention softmax, tanh-gelu MLP, PLE context projection) — G_out' recomputed on the stripped forward"
+    },
+    "implied_by_division_only": {
+      "norm_gin_over_s": 16.812,
+      "vs_norm_gout": 13.974,
+      "ratio": 1.203,
+      "note": "crude check: ||G_in||/s vs ||G_out|| (ignores nonlinear reflow)"
+    },
+    "decision_rule_result": "NOT explained by the embedding gain — structural 'input tyranny' survives scale removal.",
+    "part_a_status": "done",
+    "part_a": {
+      "base_loss": 7.132609,
+      "epsilon_sweep": [
+        {
+          "epsilon": 1e-05,
+          "loss_after_gin_direction_perturbation": 7.093512,
+          "loss_after_gout_direction_perturbation": 7.133386,
+          "delta_loss_in": -0.039098,
+          "delta_loss_out": 0.000777,
+          "ratio_delta_in_over_out": -50.334,
+          "first_order_prediction_delta_in": 0.054057,
+          "first_order_prediction_delta_out": 0.000139
+        },
+        {
+          "epsilon": 0.0001,
+          "loss_after_gin_direction_perturbation": 6.795595,
+          "loss_after_gout_direction_perturbation": 7.120347,
+          "delta_loss_in": -0.337015,
+          "delta_loss_out": -0.012262,
+          "ratio_delta_in_over_out": 27.485,
+          "first_order_prediction_delta_in": 0.540568,
+          "first_order_prediction_delta_out": 0.00139
+        },
+        {
+          "epsilon": 0.001,
+          "loss_after_gin_direction_perturbation": 7.219808,
+          "loss_after_gout_direction_perturbation": 7.13401,
+          "delta_loss_in": 0.087199,
+          "delta_loss_out": 0.001401,
+          "ratio_delta_in_over_out": 62.243,
+          "first_order_prediction_delta_in": 5.405679,
+          "first_order_prediction_delta_out": 0.0139
+        }
+      ],
+      "norm_gin_fp32_cpu": 5405.679,
+      "norm_gout_fp32_cpu": 13.9,
+      "anomaly_note": "fp32/CPU run sits in a different numerical regime than bf16/GPU: ||G_in||_fp32 = 5405.7 vs 658.9 (bf16) — an 8x gap too large for dtype rounding; and the sweep breaks first-order linearity, with delta_loss_in flipping sign between eps=1e-4 (-0.337) and eps=1e-3 (+0.087) at magnitudes far below the eps*||G|| predictions (likely tanh softcap 30 saturation dynamics on O(1e2) scaled-embedding hidden states, dtype-sensitive). Part A therefore does NOT confirm functional steepness for this model; the discriminating result is Part B (reproducible: raw ratio 47.14 -> 47.15 across two runs, stripped 5.837 -> 5.841)."
+    }
+  },
+  "interpretation_notes": [
+    "Part A (epsilon sweep 1e-5..1e-3) is designed to be first-order: Delta-L ~= eps*<G_total,d>, so for a tied matrix its ratio should track the gradient norm ratio. For gemma-4 it did NOT (see part_a.anomaly_note): the fp32/CPU forward is in a different numerical regime than bf16/GPU, so Part A neither confirms nor refutes functional steepness here — the discriminator remains Part B (scale-stripped norms; see decision_rule_result and implied_by_division_only).",
+    "Gemma-4 feeds a SECOND scaled embedding table (PLE, scale 16, 2.35B params) into every decoder layer — the input side gets two scaled channels, not one."
+  ]
+}

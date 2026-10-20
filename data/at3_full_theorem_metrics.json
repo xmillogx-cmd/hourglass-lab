@@ -1,0 +1,3562 @@
+{
+  "smollm-135m": {
+    "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.float32",
+    "n_layers": 30,
+    "selected_layers": [
+      2,
+      6,
+      10,
+      14,
+      19,
+      23,
+      26,
+      29
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_smollm-135m.npz",
+      "noisy_last": "at3_noisy_last_smollm-135m.npz",
+      "margins": "at3_margins_smollm-135m.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 148.93099,
+          "dlogit_max": 0.0468
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 4e-06,
+          "dlogit_mean": 289.89523,
+          "dlogit_max": 0.1064
+        }
+      },
+      "6": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 136.60639,
+          "dlogit_max": 0.0363
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 3e-06,
+          "dlogit_mean": 237.57996,
+          "dlogit_max": 0.0594
+        }
+      },
+      "10": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 122.33613,
+          "dlogit_max": 0.0296
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 3e-06,
+          "dlogit_mean": 234.23184,
+          "dlogit_max": 0.0601
+        }
+      },
+      "14": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 1.8e-05,
+          "dlogit_mean": 627.93076,
+          "dlogit_max": 0.1218
+        },
+        "0.0013": {
+          "flip_rate": 0.003906,
+          "kl": 6.6e-05,
+          "dlogit_mean": 1153.06665,
+          "dlogit_max": 0.2532
+        }
+      },
+      "19": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 1.1e-05,
+          "dlogit_mean": 492.88486,
+          "dlogit_max": 0.1123
+        },
+        "0.0013": {
+          "flip_rate": 0.005859,
+          "kl": 3.2e-05,
+          "dlogit_mean": 897.27338,
+          "dlogit_max": 0.206
+        }
+      },
+      "23": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 5e-06,
+          "dlogit_mean": 377.74464,
+          "dlogit_max": 0.0912
+        },
+        "0.0013": {
+          "flip_rate": 0.003906,
+          "kl": 1.7e-05,
+          "dlogit_mean": 692.76562,
+          "dlogit_max": 0.1712
+        }
+      },
+      "26": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 4e-06,
+          "dlogit_mean": 321.3295,
+          "dlogit_max": 0.0661
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 1.2e-05,
+          "dlogit_mean": 573.20007,
+          "dlogit_max": 0.1303
+        }
+      },
+      "29": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 3e-06,
+          "dlogit_mean": 182.55587,
+          "dlogit_max": 0.0519
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1.2e-05,
+          "dlogit_mean": 348.26218,
+          "dlogit_max": 0.102
+        }
+      }
+    },
+    "u6_pairs": {
+      "2": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002832,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "6": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002822,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "10": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002823,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "14": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.003906
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 508,
+          "agree_rate": 0.992188,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.005859
+        }
+      ],
+      "19": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002819,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.003906
+        }
+      ],
+      "23": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.003906
+        }
+      ],
+      "26": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002822,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "29": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002831,
+          "n_pos": 512,
+          "n_agree": 509,
+          "agree_rate": 0.994141,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ]
+    }
+  },
+  "qwen2.5-0.5b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.float32",
+    "n_layers": 24,
+    "selected_layers": [
+      2,
+      5,
+      8,
+      12,
+      15,
+      18,
+      21,
+      23
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_qwen2.5-0.5b.npz",
+      "noisy_last": "at3_noisy_last_qwen2.5-0.5b.npz",
+      "margins": "at3_margins_qwen2.5-0.5b.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 2e-06,
+          "dlogit_mean": 291.02327,
+          "dlogit_max": 0.0762
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 5e-06,
+          "dlogit_mean": 539.29355,
+          "dlogit_max": 0.0701
+        }
+      },
+      "5": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 5e-06,
+          "dlogit_mean": 510.28525,
+          "dlogit_max": 0.0678
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 1.6e-05,
+          "dlogit_mean": 972.29434,
+          "dlogit_max": 0.1745
+        }
+      },
+      "8": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 4e-06,
+          "dlogit_mean": 503.793,
+          "dlogit_max": 0.0597
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 1.5e-05,
+          "dlogit_mean": 933.87723,
+          "dlogit_max": 0.0896
+        }
+      },
+      "12": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 4e-06,
+          "dlogit_mean": 516.73051,
+          "dlogit_max": 0.051
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1.5e-05,
+          "dlogit_mean": 982.12964,
+          "dlogit_max": 0.1126
+        }
+      },
+      "15": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 5e-06,
+          "dlogit_mean": 587.92889,
+          "dlogit_max": 0.0847
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1.9e-05,
+          "dlogit_mean": 1098.93906,
+          "dlogit_max": 0.239
+        }
+      },
+      "18": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 2e-06,
+          "dlogit_mean": 435.34276,
+          "dlogit_max": 0.039
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 7e-06,
+          "dlogit_mean": 808.5444,
+          "dlogit_max": 0.096
+        }
+      },
+      "21": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 289.16251,
+          "dlogit_max": 0.0197
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 2e-06,
+          "dlogit_mean": 536.13522,
+          "dlogit_max": 0.0387
+        }
+      },
+      "23": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 298.47327,
+          "dlogit_max": 0.0237
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 4e-06,
+          "dlogit_mean": 553.94769,
+          "dlogit_max": 0.0388
+        }
+      }
+    },
+    "u6_pairs": {
+      "2": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002826,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "5": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002831,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "8": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "12": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002824,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "15": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "18": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002831,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "21": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002825,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "23": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002826,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ]
+    }
+  },
+  "tinyllama-1.1b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.float32",
+    "n_layers": 22,
+    "selected_layers": [
+      2,
+      4,
+      7,
+      10,
+      14,
+      17,
+      19,
+      21
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_tinyllama-1.1b.npz",
+      "noisy_last": "at3_noisy_last_tinyllama-1.1b.npz",
+      "margins": "at3_margins_tinyllama-1.1b.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 6e-06,
+          "dlogit_mean": 109.59781,
+          "dlogit_max": 0.0848
+        },
+        "0.0013": {
+          "flip_rate": 0.003906,
+          "kl": 2.5e-05,
+          "dlogit_mean": 223.69039,
+          "dlogit_max": 0.168
+        }
+      },
+      "4": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 3e-06,
+          "dlogit_mean": 78.04971,
+          "dlogit_max": 0.0607
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1e-05,
+          "dlogit_mean": 136.44818,
+          "dlogit_max": 0.1149
+        }
+      },
+      "7": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 3e-06,
+          "dlogit_mean": 74.09131,
+          "dlogit_max": 0.0543
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 9e-06,
+          "dlogit_mean": 137.66512,
+          "dlogit_max": 0.0921
+        }
+      },
+      "10": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 53.84446,
+          "dlogit_max": 0.0338
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 4e-06,
+          "dlogit_mean": 99.08958,
+          "dlogit_max": 0.0618
+        }
+      },
+      "14": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 49.68178,
+          "dlogit_max": 0.0439
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 3e-06,
+          "dlogit_mean": 92.90273,
+          "dlogit_max": 0.0842
+        }
+      },
+      "17": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 47.72374,
+          "dlogit_max": 0.0323
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 2e-06,
+          "dlogit_mean": 88.61697,
+          "dlogit_max": 0.0702
+        }
+      },
+      "19": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 44.64252,
+          "dlogit_max": 0.0302
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 2e-06,
+          "dlogit_mean": 82.95973,
+          "dlogit_max": 0.0496
+        }
+      },
+      "21": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 41.22191,
+          "dlogit_max": 0.029
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 76.52782,
+          "dlogit_max": 0.0488
+        }
+      }
+    },
+    "u6_pairs": {
+      "2": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.003906
+        }
+      ],
+      "4": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002829,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.007812,
+          "flip_arm2_vs_base": 0.003906
+        }
+      ],
+      "7": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002829,
+          "n_pos": 512,
+          "n_agree": 509,
+          "agree_rate": 0.994141,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.003906
+        }
+      ],
+      "10": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002826,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "14": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "17": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "19": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "21": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.0
+        }
+      ]
+    }
+  },
+  "qwen2.5-3b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.bfloat16",
+    "n_layers": 36,
+    "selected_layers": [
+      3,
+      7,
+      12,
+      18,
+      23,
+      28,
+      32,
+      35
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_qwen2.5-3b.npz",
+      "noisy_last": "at3_noisy_last_qwen2.5-3b.npz",
+      "margins": "at3_margins_qwen2.5-3b.npz"
+    },
+    "singles": {
+      "3": {
+        "0.0007": {
+          "flip_rate": 0.019531,
+          "kl": 0.000732,
+          "dlogit_mean": 5176.03247,
+          "dlogit_max": 0.5938
+        },
+        "0.0013": {
+          "flip_rate": 0.019531,
+          "kl": 0.000723,
+          "dlogit_mean": 5142.34326,
+          "dlogit_max": 0.8594
+        }
+      },
+      "7": {
+        "0.0007": {
+          "flip_rate": 0.013672,
+          "kl": 0.000681,
+          "dlogit_mean": 4942.08057,
+          "dlogit_max": 0.6875
+        },
+        "0.0013": {
+          "flip_rate": 0.011719,
+          "kl": 0.000708,
+          "dlogit_mean": 5068.44727,
+          "dlogit_max": 0.75
+        }
+      },
+      "12": {
+        "0.0007": {
+          "flip_rate": 0.017578,
+          "kl": 0.000609,
+          "dlogit_mean": 4729.06104,
+          "dlogit_max": 0.75
+        },
+        "0.0013": {
+          "flip_rate": 0.017578,
+          "kl": 0.000632,
+          "dlogit_mean": 4806.7041,
+          "dlogit_max": 0.625
+        }
+      },
+      "18": {
+        "0.0007": {
+          "flip_rate": 0.005859,
+          "kl": 0.000583,
+          "dlogit_mean": 4343.58826,
+          "dlogit_max": 0.625
+        },
+        "0.0013": {
+          "flip_rate": 0.021484,
+          "kl": 0.000592,
+          "dlogit_mean": 4398.93604,
+          "dlogit_max": 0.5312
+        }
+      },
+      "23": {
+        "0.0007": {
+          "flip_rate": 0.013672,
+          "kl": 0.000548,
+          "dlogit_mean": 4125.78638,
+          "dlogit_max": 0.4062
+        },
+        "0.0013": {
+          "flip_rate": 0.019531,
+          "kl": 0.00056,
+          "dlogit_mean": 4080.58984,
+          "dlogit_max": 0.4062
+        }
+      },
+      "28": {
+        "0.0007": {
+          "flip_rate": 0.009766,
+          "kl": 0.000474,
+          "dlogit_mean": 3397.02063,
+          "dlogit_max": 0.3125
+        },
+        "0.0013": {
+          "flip_rate": 0.011719,
+          "kl": 0.000489,
+          "dlogit_mean": 3469.55664,
+          "dlogit_max": 0.375
+        }
+      },
+      "32": {
+        "0.0007": {
+          "flip_rate": 0.017578,
+          "kl": 0.000336,
+          "dlogit_mean": 2260.33142,
+          "dlogit_max": 0.25
+        },
+        "0.0013": {
+          "flip_rate": 0.009766,
+          "kl": 0.000363,
+          "dlogit_mean": 2420.17615,
+          "dlogit_max": 0.25
+        }
+      },
+      "35": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 3.9e-05,
+          "dlogit_mean": 335.85789,
+          "dlogit_max": 0.125
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 0.000105,
+          "dlogit_mean": 675.8089,
+          "dlogit_max": 0.125
+        }
+      }
+    },
+    "u6_pairs": {
+      "3": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 501,
+          "agree_rate": 0.978516,
+          "flip_arm1_vs_base": 0.017578,
+          "flip_arm2_vs_base": 0.011719
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 499,
+          "agree_rate": 0.974609,
+          "flip_arm1_vs_base": 0.015625,
+          "flip_arm2_vs_base": 0.019531
+        }
+      ],
+      "7": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 502,
+          "agree_rate": 0.980469,
+          "flip_arm1_vs_base": 0.013672,
+          "flip_arm2_vs_base": 0.017578
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 499,
+          "agree_rate": 0.974609,
+          "flip_arm1_vs_base": 0.015625,
+          "flip_arm2_vs_base": 0.015625
+        }
+      ],
+      "12": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 504,
+          "agree_rate": 0.984375,
+          "flip_arm1_vs_base": 0.007812,
+          "flip_arm2_vs_base": 0.015625
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002823,
+          "n_pos": 512,
+          "n_agree": 506,
+          "agree_rate": 0.988281,
+          "flip_arm1_vs_base": 0.009766,
+          "flip_arm2_vs_base": 0.009766
+        }
+      ],
+      "18": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.017578,
+          "flip_arm2_vs_base": 0.009766
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.007812,
+          "flip_arm2_vs_base": 0.017578
+        }
+      ],
+      "23": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 503,
+          "agree_rate": 0.982422,
+          "flip_arm1_vs_base": 0.011719,
+          "flip_arm2_vs_base": 0.017578
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002829,
+          "n_pos": 512,
+          "n_agree": 502,
+          "agree_rate": 0.980469,
+          "flip_arm1_vs_base": 0.011719,
+          "flip_arm2_vs_base": 0.023438
+        }
+      ],
+      "28": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 502,
+          "agree_rate": 0.980469,
+          "flip_arm1_vs_base": 0.009766,
+          "flip_arm2_vs_base": 0.017578
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002826,
+          "n_pos": 512,
+          "n_agree": 504,
+          "agree_rate": 0.984375,
+          "flip_arm1_vs_base": 0.015625,
+          "flip_arm2_vs_base": 0.015625
+        }
+      ],
+      "32": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 506,
+          "agree_rate": 0.988281,
+          "flip_arm1_vs_base": 0.011719,
+          "flip_arm2_vs_base": 0.011719
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002832,
+          "n_pos": 512,
+          "n_agree": 503,
+          "agree_rate": 0.982422,
+          "flip_arm1_vs_base": 0.013672,
+          "flip_arm2_vs_base": 0.011719
+        }
+      ],
+      "35": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002832,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.005859
+        }
+      ]
+    }
+  },
+  "qwen3-4b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.bfloat16",
+    "n_layers": 36,
+    "selected_layers": [
+      3,
+      7,
+      12,
+      18,
+      23,
+      28,
+      32,
+      35
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_qwen3-4b.npz",
+      "noisy_last": "at3_noisy_last_qwen3-4b.npz",
+      "margins": "at3_margins_qwen3-4b.npz"
+    },
+    "singles": {
+      "3": {
+        "0.0007": {
+          "flip_rate": 0.011719,
+          "kl": 0.000743,
+          "dlogit_mean": 7903.21069,
+          "dlogit_max": 9.2812
+        },
+        "0.0013": {
+          "flip_rate": 0.011719,
+          "kl": 0.000777,
+          "dlogit_mean": 8117.86963,
+          "dlogit_max": 7.9219
+        }
+      },
+      "7": {
+        "0.0007": {
+          "flip_rate": 0.007812,
+          "kl": 0.000802,
+          "dlogit_mean": 7264.21875,
+          "dlogit_max": 3.0781
+        },
+        "0.0013": {
+          "flip_rate": 0.009766,
+          "kl": 0.000957,
+          "dlogit_mean": 7605.83667,
+          "dlogit_max": 2.8594
+        }
+      },
+      "12": {
+        "0.0007": {
+          "flip_rate": 0.007812,
+          "kl": 0.000766,
+          "dlogit_mean": 6602.16406,
+          "dlogit_max": 1.0391
+        },
+        "0.0013": {
+          "flip_rate": 0.005859,
+          "kl": 0.000678,
+          "dlogit_mean": 7051.91797,
+          "dlogit_max": 2.1802
+        }
+      },
+      "18": {
+        "0.0007": {
+          "flip_rate": 0.009766,
+          "kl": 0.00066,
+          "dlogit_mean": 6140.57935,
+          "dlogit_max": 0.75
+        },
+        "0.0013": {
+          "flip_rate": 0.009766,
+          "kl": 0.000647,
+          "dlogit_mean": 6079.90283,
+          "dlogit_max": 0.7188
+        }
+      },
+      "23": {
+        "0.0007": {
+          "flip_rate": 0.003906,
+          "kl": 0.000519,
+          "dlogit_mean": 5294.57861,
+          "dlogit_max": 0.7188
+        },
+        "0.0013": {
+          "flip_rate": 0.003906,
+          "kl": 0.000495,
+          "dlogit_mean": 5552.87524,
+          "dlogit_max": 0.5293
+        }
+      },
+      "28": {
+        "0.0007": {
+          "flip_rate": 0.003906,
+          "kl": 0.000389,
+          "dlogit_mean": 4311.948,
+          "dlogit_max": 0.5
+        },
+        "0.0013": {
+          "flip_rate": 0.003906,
+          "kl": 0.000399,
+          "dlogit_mean": 4381.17261,
+          "dlogit_max": 0.375
+        }
+      },
+      "32": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 0.000306,
+          "dlogit_mean": 3077.00293,
+          "dlogit_max": 0.5234
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 0.000313,
+          "dlogit_mean": 3274.72729,
+          "dlogit_max": 0.25
+        }
+      },
+      "35": {
+        "0.0007": {
+          "flip_rate": 0.001953,
+          "kl": 3.3e-05,
+          "dlogit_mean": 282.93533,
+          "dlogit_max": 0.125
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 4.6e-05,
+          "dlogit_mean": 590.51202,
+          "dlogit_max": 0.125
+        }
+      }
+    },
+    "u6_pairs": {
+      "3": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 505,
+          "agree_rate": 0.986328,
+          "flip_arm1_vs_base": 0.013672,
+          "flip_arm2_vs_base": 0.003906
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002826,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.007812,
+          "flip_arm2_vs_base": 0.009766
+        }
+      ],
+      "7": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 508,
+          "agree_rate": 0.992188,
+          "flip_arm1_vs_base": 0.009766,
+          "flip_arm2_vs_base": 0.009766
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 508,
+          "agree_rate": 0.992188,
+          "flip_arm1_vs_base": 0.007812,
+          "flip_arm2_vs_base": 0.011719
+        }
+      ],
+      "12": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 509,
+          "agree_rate": 0.994141,
+          "flip_arm1_vs_base": 0.009766,
+          "flip_arm2_vs_base": 0.007812
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 506,
+          "agree_rate": 0.988281,
+          "flip_arm1_vs_base": 0.013672,
+          "flip_arm2_vs_base": 0.009766
+        }
+      ],
+      "18": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.007812
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 508,
+          "agree_rate": 0.992188,
+          "flip_arm1_vs_base": 0.007812,
+          "flip_arm2_vs_base": 0.011719
+        }
+      ],
+      "23": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 508,
+          "agree_rate": 0.992188,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.005859
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002825,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.005859
+        }
+      ],
+      "28": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 509,
+          "agree_rate": 0.994141,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.007812
+        }
+      ],
+      "32": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002829,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "35": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ]
+    }
+  },
+  "gemma-4-e2b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.bfloat16",
+    "n_layers": 35,
+    "selected_layers": [
+      3,
+      7,
+      12,
+      17,
+      22,
+      27,
+      31,
+      34
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_gemma-4-e2b.npz",
+      "noisy_last": "at3_noisy_last_gemma-4-e2b.npz",
+      "margins": "at3_margins_gemma-4-e2b.npz"
+    },
+    "singles": {
+      "3": {
+        "0.0007": {
+          "flip_rate": 0.074219,
+          "kl": 0.062111,
+          "dlogit_mean": 152292.73438,
+          "dlogit_max": 10.5938
+        },
+        "0.0013": {
+          "flip_rate": 0.205078,
+          "kl": 0.325024,
+          "dlogit_mean": 564419.21875,
+          "dlogit_max": 28.375
+        }
+      },
+      "7": {
+        "0.0007": {
+          "flip_rate": 0.0625,
+          "kl": 0.020636,
+          "dlogit_mean": 121734.24219,
+          "dlogit_max": 7.25
+        },
+        "0.0013": {
+          "flip_rate": 0.136719,
+          "kl": 0.115919,
+          "dlogit_mean": 195943.84375,
+          "dlogit_max": 13.6875
+        }
+      },
+      "12": {
+        "0.0007": {
+          "flip_rate": 0.066406,
+          "kl": 0.035431,
+          "dlogit_mean": 102028.87891,
+          "dlogit_max": 6.2949
+        },
+        "0.0013": {
+          "flip_rate": 0.166016,
+          "kl": 0.122243,
+          "dlogit_mean": 204770.26562,
+          "dlogit_max": 10.2969
+        }
+      },
+      "17": {
+        "0.0007": {
+          "flip_rate": 0.017578,
+          "kl": 0.000935,
+          "dlogit_mean": 17014.65088,
+          "dlogit_max": 1.0
+        },
+        "0.0013": {
+          "flip_rate": 0.015625,
+          "kl": 0.000957,
+          "dlogit_mean": 17121.26855,
+          "dlogit_max": 0.8125
+        }
+      },
+      "22": {
+        "0.0007": {
+          "flip_rate": 0.011719,
+          "kl": 0.00091,
+          "dlogit_mean": 16715.39551,
+          "dlogit_max": 1.0625
+        },
+        "0.0013": {
+          "flip_rate": 0.019531,
+          "kl": 0.000914,
+          "dlogit_mean": 16896.78857,
+          "dlogit_max": 0.8438
+        }
+      },
+      "27": {
+        "0.0007": {
+          "flip_rate": 0.009766,
+          "kl": 0.000637,
+          "dlogit_mean": 13652.91797,
+          "dlogit_max": 0.75
+        },
+        "0.0013": {
+          "flip_rate": 0.011719,
+          "kl": 0.000648,
+          "dlogit_mean": 13643.43164,
+          "dlogit_max": 0.8203
+        }
+      },
+      "31": {
+        "0.0007": {
+          "flip_rate": 0.013672,
+          "kl": 0.000545,
+          "dlogit_mean": 10775.1582,
+          "dlogit_max": 0.6094
+        },
+        "0.0013": {
+          "flip_rate": 0.013672,
+          "kl": 0.000564,
+          "dlogit_mean": 11488.19775,
+          "dlogit_max": 0.625
+        }
+      },
+      "34": {
+        "0.0007": {
+          "flip_rate": 0.003906,
+          "kl": 0.000136,
+          "dlogit_mean": 2388.53857,
+          "dlogit_max": 0.1875
+        },
+        "0.0013": {
+          "flip_rate": 0.003906,
+          "kl": 0.000271,
+          "dlogit_mean": 4301.86719,
+          "dlogit_max": 0.3125
+        }
+      }
+    },
+    "u6_pairs": {
+      "3": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 429,
+          "agree_rate": 0.837891,
+          "flip_arm1_vs_base": 0.167969,
+          "flip_arm2_vs_base": 0.095703
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 395,
+          "agree_rate": 0.771484,
+          "flip_arm1_vs_base": 0.25,
+          "flip_arm2_vs_base": 0.1875
+        }
+      ],
+      "7": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 485,
+          "agree_rate": 0.947266,
+          "flip_arm1_vs_base": 0.0625,
+          "flip_arm2_vs_base": 0.041016
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002831,
+          "n_pos": 512,
+          "n_agree": 420,
+          "agree_rate": 0.820312,
+          "flip_arm1_vs_base": 0.191406,
+          "flip_arm2_vs_base": 0.183594
+        }
+      ],
+      "12": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 472,
+          "agree_rate": 0.921875,
+          "flip_arm1_vs_base": 0.064453,
+          "flip_arm2_vs_base": 0.0625
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 369,
+          "agree_rate": 0.720703,
+          "flip_arm1_vs_base": 0.220703,
+          "flip_arm2_vs_base": 0.222656
+        }
+      ],
+      "17": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 504,
+          "agree_rate": 0.984375,
+          "flip_arm1_vs_base": 0.015625,
+          "flip_arm2_vs_base": 0.015625
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002826,
+          "n_pos": 512,
+          "n_agree": 504,
+          "agree_rate": 0.984375,
+          "flip_arm1_vs_base": 0.017578,
+          "flip_arm2_vs_base": 0.013672
+        }
+      ],
+      "22": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 502,
+          "agree_rate": 0.980469,
+          "flip_arm1_vs_base": 0.013672,
+          "flip_arm2_vs_base": 0.021484
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 502,
+          "agree_rate": 0.980469,
+          "flip_arm1_vs_base": 0.013672,
+          "flip_arm2_vs_base": 0.017578
+        }
+      ],
+      "27": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 501,
+          "agree_rate": 0.978516,
+          "flip_arm1_vs_base": 0.019531,
+          "flip_arm2_vs_base": 0.017578
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002824,
+          "n_pos": 512,
+          "n_agree": 503,
+          "agree_rate": 0.982422,
+          "flip_arm1_vs_base": 0.017578,
+          "flip_arm2_vs_base": 0.015625
+        }
+      ],
+      "31": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.009766,
+          "flip_arm2_vs_base": 0.015625
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002822,
+          "n_pos": 512,
+          "n_agree": 508,
+          "agree_rate": 0.992188,
+          "flip_arm1_vs_base": 0.011719,
+          "flip_arm2_vs_base": 0.011719
+        }
+      ],
+      "34": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002824,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ]
+    }
+  },
+  "pythia-2.8b": {
+    "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.bfloat16",
+    "n_layers": 32,
+    "selected_layers": [
+      2,
+      6,
+      11,
+      16,
+      20,
+      25,
+      28,
+      31
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_pythia-2.8b.npz",
+      "noisy_last": "at3_noisy_last_pythia-2.8b.npz",
+      "margins": "at3_margins_pythia-2.8b.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0007": {
+          "flip_rate": 0.035156,
+          "kl": 0.007486,
+          "dlogit_mean": 9495.09961,
+          "dlogit_max": 4.4844
+        },
+        "0.0013": {
+          "flip_rate": 0.029297,
+          "kl": 0.00687,
+          "dlogit_mean": 9236.9502,
+          "dlogit_max": 3.75
+        }
+      },
+      "6": {
+        "0.0007": {
+          "flip_rate": 0.029297,
+          "kl": 0.005933,
+          "dlogit_mean": 9063.5835,
+          "dlogit_max": 3.75
+        },
+        "0.0013": {
+          "flip_rate": 0.03125,
+          "kl": 0.006159,
+          "dlogit_mean": 9095.7959,
+          "dlogit_max": 3.9482
+        }
+      },
+      "11": {
+        "0.0007": {
+          "flip_rate": 0.037109,
+          "kl": 0.008867,
+          "dlogit_mean": 9768.97754,
+          "dlogit_max": 4.25
+        },
+        "0.0013": {
+          "flip_rate": 0.029297,
+          "kl": 0.007058,
+          "dlogit_mean": 9168.65039,
+          "dlogit_max": 3.6719
+        }
+      },
+      "16": {
+        "0.0007": {
+          "flip_rate": 0.03125,
+          "kl": 0.005417,
+          "dlogit_mean": 8389.47168,
+          "dlogit_max": 5.4531
+        },
+        "0.0013": {
+          "flip_rate": 0.027344,
+          "kl": 0.005918,
+          "dlogit_mean": 8324.30591,
+          "dlogit_max": 3.9219
+        }
+      },
+      "20": {
+        "0.0007": {
+          "flip_rate": 0.023438,
+          "kl": 0.004373,
+          "dlogit_mean": 7105.02734,
+          "dlogit_max": 3.375
+        },
+        "0.0013": {
+          "flip_rate": 0.033203,
+          "kl": 0.005734,
+          "dlogit_mean": 7613.53003,
+          "dlogit_max": 2.8438
+        }
+      },
+      "25": {
+        "0.0007": {
+          "flip_rate": 0.005859,
+          "kl": 0.000999,
+          "dlogit_mean": 2940.24854,
+          "dlogit_max": 2.0938
+        },
+        "0.0013": {
+          "flip_rate": 0.007812,
+          "kl": 0.000977,
+          "dlogit_mean": 3243.95459,
+          "dlogit_max": 2.2109
+        }
+      },
+      "28": {
+        "0.0007": {
+          "flip_rate": 0.003906,
+          "kl": 0.000321,
+          "dlogit_mean": 1077.94269,
+          "dlogit_max": 0.5938
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 0.000361,
+          "dlogit_mean": 1349.32153,
+          "dlogit_max": 1.8232
+        }
+      },
+      "31": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 2.3e-05,
+          "dlogit_mean": 65.35517,
+          "dlogit_max": 0.125
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 4.4e-05,
+          "dlogit_mean": 140.2095,
+          "dlogit_max": 0.125
+        }
+      }
+    },
+    "u6_pairs": {
+      "2": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 496,
+          "agree_rate": 0.96875,
+          "flip_arm1_vs_base": 0.023438,
+          "flip_arm2_vs_base": 0.046875
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 494,
+          "agree_rate": 0.964844,
+          "flip_arm1_vs_base": 0.023438,
+          "flip_arm2_vs_base": 0.041016
+        }
+      ],
+      "6": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 493,
+          "agree_rate": 0.962891,
+          "flip_arm1_vs_base": 0.048828,
+          "flip_arm2_vs_base": 0.044922
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 494,
+          "agree_rate": 0.964844,
+          "flip_arm1_vs_base": 0.037109,
+          "flip_arm2_vs_base": 0.033203
+        }
+      ],
+      "11": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 494,
+          "agree_rate": 0.964844,
+          "flip_arm1_vs_base": 0.035156,
+          "flip_arm2_vs_base": 0.027344
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002829,
+          "n_pos": 512,
+          "n_agree": 500,
+          "agree_rate": 0.976562,
+          "flip_arm1_vs_base": 0.033203,
+          "flip_arm2_vs_base": 0.025391
+        }
+      ],
+      "16": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000706,
+          "n_pos": 512,
+          "n_agree": 497,
+          "agree_rate": 0.970703,
+          "flip_arm1_vs_base": 0.035156,
+          "flip_arm2_vs_base": 0.025391
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 497,
+          "agree_rate": 0.970703,
+          "flip_arm1_vs_base": 0.029297,
+          "flip_arm2_vs_base": 0.033203
+        }
+      ],
+      "20": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 497,
+          "agree_rate": 0.970703,
+          "flip_arm1_vs_base": 0.035156,
+          "flip_arm2_vs_base": 0.029297
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002825,
+          "n_pos": 512,
+          "n_agree": 500,
+          "agree_rate": 0.976562,
+          "flip_arm1_vs_base": 0.027344,
+          "flip_arm2_vs_base": 0.027344
+        }
+      ],
+      "25": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 507,
+          "agree_rate": 0.990234,
+          "flip_arm1_vs_base": 0.005859,
+          "flip_arm2_vs_base": 0.007812
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002833,
+          "n_pos": 512,
+          "n_agree": 503,
+          "agree_rate": 0.982422,
+          "flip_arm1_vs_base": 0.017578,
+          "flip_arm2_vs_base": 0.011719
+        }
+      ],
+      "28": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000705,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.001953
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "31": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 510,
+          "agree_rate": 0.996094,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.003906
+        }
+      ]
+    }
+  },
+  "phi-1_5": {
+    "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+    "gpu_used": "cuda:1",
+    "dtype": "torch.float32",
+    "n_layers": 24,
+    "selected_layers": [
+      2,
+      5,
+      8,
+      12,
+      15,
+      18,
+      21,
+      23
+    ],
+    "params": {
+      "epsilon": 0.001,
+      "delta_param": 0.005,
+      "gamma": 0.0003,
+      "eps_minus_gamma": 0.0007,
+      "eps_plus_gamma": 0.0013,
+      "delta_minus_2gamma": 0.0044,
+      "single_deltas": [
+        0.0007000000000000001,
+        0.0013
+      ],
+      "pair_scales": [
+        0.0005,
+        0.002
+      ]
+    },
+    "protocol": "base forward (no_grad) + hook injection of H + delta*RMS(H_base)*randn_like(H) at each selected decoder layer; D(s,s0)=delta relative to base-state RMS; exogenous epsilon=1e-3, delta_param=5e-3, gamma=3e-4 (paper Table 5 style); singles at eps-gamma / eps+gamma with flip rate, KL, |dlogits|, decision margins; U6 pairs: two independent injections per layer/scale, D(s1,s2)=RMS(eta1-eta2)/RMS and per-position F(s1)<->F(s2) agreement; dumps: fp16 logits at common K=128 positions (SWD ensembles), top-64 logit slice per position (cross-model A10)",
+    "L_tokens": 512,
+    "pos_indices": [
+      1,
+      2,
+      5,
+      15,
+      18,
+      20,
+      21,
+      29,
+      43,
+      47,
+      49,
+      52,
+      61,
+      68,
+      71,
+      74,
+      77,
+      86,
+      87,
+      88,
+      91,
+      104,
+      110,
+      111,
+      112,
+      113,
+      117,
+      118,
+      123,
+      124,
+      139,
+      144,
+      159,
+      169,
+      175,
+      183,
+      189,
+      190,
+      192,
+      195,
+      197,
+      198,
+      199,
+      200,
+      204,
+      208,
+      212,
+      221,
+      224,
+      225,
+      228,
+      230,
+      239,
+      241,
+      244,
+      248,
+      259,
+      262,
+      263,
+      264,
+      278,
+      284,
+      288,
+      291,
+      294,
+      296,
+      297,
+      302,
+      303,
+      306,
+      307,
+      313,
+      314,
+      320,
+      324,
+      325,
+      328,
+      329,
+      330,
+      332,
+      334,
+      338,
+      344,
+      345,
+      348,
+      349,
+      353,
+      354,
+      360,
+      362,
+      363,
+      367,
+      383,
+      399,
+      401,
+      403,
+      406,
+      407,
+      411,
+      414,
+      416,
+      419,
+      420,
+      421,
+      424,
+      435,
+      438,
+      440,
+      442,
+      444,
+      445,
+      450,
+      455,
+      457,
+      458,
+      477,
+      484,
+      488,
+      491,
+      492,
+      496,
+      499,
+      502,
+      504,
+      506,
+      507,
+      508,
+      510
+    ],
+    "dumps": {
+      "base": "at3_base_logits_phi-1_5.npz",
+      "noisy_last": "at3_noisy_last_phi-1_5.npz",
+      "margins": "at3_margins_phi-1_5.npz"
+    },
+    "singles": {
+      "2": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 49.40127,
+          "dlogit_max": 0.0237
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 94.74246,
+          "dlogit_max": 0.0329
+        }
+      },
+      "5": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 54.91199,
+          "dlogit_max": 0.0154
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 1e-06,
+          "dlogit_mean": 98.4077,
+          "dlogit_max": 0.031
+        }
+      },
+      "8": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 50.88216,
+          "dlogit_max": 0.012
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 94.34782,
+          "dlogit_max": 0.027
+        }
+      },
+      "12": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 55.65887,
+          "dlogit_max": 0.0119
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 104.9375,
+          "dlogit_max": 0.0251
+        }
+      },
+      "15": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 60.60969,
+          "dlogit_max": 0.016
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 1e-06,
+          "dlogit_mean": 113.76567,
+          "dlogit_max": 0.0285
+        }
+      },
+      "18": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 65.70054,
+          "dlogit_max": 0.0158
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 119.83082,
+          "dlogit_max": 0.0292
+        }
+      },
+      "21": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 0.0,
+          "dlogit_mean": 66.73013,
+          "dlogit_max": 0.0262
+        },
+        "0.0013": {
+          "flip_rate": 0.001953,
+          "kl": 1e-06,
+          "dlogit_mean": 124.80968,
+          "dlogit_max": 0.0356
+        }
+      },
+      "23": {
+        "0.0007": {
+          "flip_rate": 0.0,
+          "kl": 1e-06,
+          "dlogit_mean": 72.38586,
+          "dlogit_max": 0.0155
+        },
+        "0.0013": {
+          "flip_rate": 0.0,
+          "kl": 2e-06,
+          "dlogit_mean": 136.10953,
+          "dlogit_max": 0.0288
+        }
+      }
+    },
+    "u6_pairs": {
+      "2": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "5": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "8": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000708,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.00283,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "12": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002829,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "15": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002828,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ],
+      "18": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002825,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.0
+        }
+      ],
+      "21": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002825,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.001953,
+          "flip_arm2_vs_base": 0.003906
+        }
+      ],
+      "23": [
+        {
+          "a": 0.0005,
+          "d_s1s2": 0.000707,
+          "n_pos": 512,
+          "n_agree": 512,
+          "agree_rate": 1.0,
+          "flip_arm1_vs_base": 0.0,
+          "flip_arm2_vs_base": 0.0
+        },
+        {
+          "a": 0.002,
+          "d_s1s2": 0.002827,
+          "n_pos": 512,
+          "n_agree": 511,
+          "agree_rate": 0.998047,
+          "flip_arm1_vs_base": 0.003906,
+          "flip_arm2_vs_base": 0.001953
+        }
+      ]
+    }
+  }
+}

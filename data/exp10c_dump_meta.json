@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "corpus": "wikitext-2 test split (quantization control text), first 2048 tokens per model",
+    "raw_text_path": "G:\\uni\\cmq_experiment\\.wikitext2_raw_text.txt",
+    "n_tokens": 2048,
+    "note": "stage A of Exp10c — raw per-level activation dump for stage B structural analysis"
+  },
+  "models": {
+    "smollm-135m": {
+      "path": "G:\\uni\\cmq_experiment\\models\\smollm-135m",
+      "dtype": "torch.float32",
+      "layers_L": 30,
+      "hidden_H": 576,
+      "tied_embeddings": true,
+      "n_levels_seen": 31,
+      "npz_file": "exp10c_act_smollm-135m.npz",
+      "tokens_json": "exp10c_tokens_smollm-135m.json",
+      "size_mb": 69.8
+    },
+    "qwen2.5-0.5b": {
+      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-0.5b",
+      "dtype": "torch.float32",
+      "layers_L": 24,
+      "hidden_H": 896,
+      "tied_embeddings": true,
+      "n_levels_seen": 25,
+      "npz_file": "exp10c_act_qwen2.5-0.5b.npz",
+      "tokens_json": "exp10c_tokens_qwen2.5-0.5b.json",
+      "size_mb": 87.5
+    },
+    "tinyllama-1.1b": {
+      "path": "G:\\uni\\cmq_experiment\\models\\tinyllama-1.1b",
+      "dtype": "torch.float32",
+      "layers_L": 22,
+      "hidden_H": 2048,
+      "tied_embeddings": false,
+      "n_levels_seen": 23,
+      "npz_file": "exp10c_act_tinyllama-1.1b.npz",
+      "tokens_json": "exp10c_tokens_tinyllama-1.1b.json",
+      "size_mb": 184.0
+    },
+    "qwen2.5-3b": {
+      "path": "G:\\uni\\cmq_experiment\\models\\qwen2.5-3b",
+      "dtype": "torch.bfloat16",
+      "layers_L": 36,
+      "hidden_H": 2048,
+      "tied_embeddings": true,
+      "n_levels_seen": 37,
+      "npz_file": "exp10c_act_qwen2.5-3b.npz",
+      "tokens_json": "exp10c_tokens_qwen2.5-3b.json",
+      "size_mb": 296.0
+    },
+    "qwen3-4b": {
+      "path": "G:\\uni\\cmq_experiment\\models\\qwen3-4b",
+      "dtype": "torch.bfloat16",
+      "layers_L": 36,
+      "hidden_H": 2560,
+      "tied_embeddings": true,
+      "n_levels_seen": 37,
+      "npz_file": "exp10c_act_qwen3-4b.npz",
+      "tokens_json": "exp10c_tokens_qwen3-4b.json",
+      "size_mb": 370.0
+    },
+    "gemma-4-e2b": {
+      "path": "G:\\uni\\cmq_experiment\\models\\gemma-4-e2b",
+      "dtype": "torch.bfloat16",
+      "layers_L": 35,
+      "hidden_H": 1536,
+      "tied_embeddings": true,
+      "n_levels_seen": 36,
+      "npz_file": "exp10c_act_gemma-4-e2b.npz",
+      "tokens_json": "exp10c_tokens_gemma-4-e2b.json",
+      "size_mb": 216.0
+    },
+    "pythia-2.8b": {
+      "path": "G:\\uni\\cmq_experiment\\models\\pythia-2.8b",
+      "dtype": "torch.bfloat16",
+      "layers_L": 32,
+      "hidden_H": 2560,
+      "tied_embeddings": false,
+      "n_levels_seen": 33,
+      "npz_file": "exp10c_act_pythia-2.8b.npz",
+      "tokens_json": "exp10c_tokens_pythia-2.8b.json",
+      "size_mb": 330.0
+    },
+    "phi-1_5": {
+      "path": "G:\\uni\\cmq_experiment\\models\\phi-1_5",
+      "dtype": "torch.float32",
+      "layers_L": 24,
+      "hidden_H": 2048,
+      "tied_embeddings": false,
+      "n_levels_seen": 25,
+      "npz_file": "exp10c_act_phi-1_5.npz",
+      "tokens_json": "exp10c_tokens_phi-1_5.json",
+      "size_mb": 200.0
+    }
+  }
+}
